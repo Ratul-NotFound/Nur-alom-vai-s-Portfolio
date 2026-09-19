@@ -1,24 +1,25 @@
 {
   "name": "nur-alam-portfolio",
   "version": "1.0.0",
-  "description": "Professional portfolio website for Md. Nur Alam — AI/ML Engineer & Computer Vision Researcher",
-  "main": "index.html",
+  "private": true,
   "scripts": {
-    "dev": "npx -y serve .",
-    "start": "npx -y serve ."
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "keywords": [
-    "portfolio",
-    "ai",
-    "ml",
-    "computer-vision",
-    "deep-learning",
-    "xai",
-    "grad-cam"
-  ],
-  "author": "Md. Nur Alam",
-  "license": "MIT",
+  "dependencies": {
+    "next": "^15.1.7",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
   "devDependencies": {
-    "serve": "^14.2.4"
+    "@tailwindcss/postcss": "^4.0.0",
+    "@types/node": "^22.10.10",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "postcss": "^8.5.1",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.7.3"
   }
 }
