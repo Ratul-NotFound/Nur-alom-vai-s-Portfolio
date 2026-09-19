@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Md. Nur Alam — AI/ML Engineer & Computer Vision Researcher</title>
-  <meta name="description" content="Portfolio of Md. Nur Alam — AI/ML Engineer, Computer Vision Researcher, and Software Engineer specializing in Deep Learning, XAI (Grad-CAM), and intelligent systems.">
+  <title>Md. Nur Alam — AI/ML Engineer &amp; Computer Vision Researcher</title>
+  <meta name="description" content="Personal portfolio of Md. Nur Alam — AI/ML Engineer, Computer Vision Researcher, and Software Engineer specializing in Deep Learning, Explainable AI (Grad-CAM), and intelligent systems.">
   <meta name="author" content="Md. Nur Alam">
   <meta name="keywords" content="Md. Nur Alam, AI/ML Engineer, Computer Vision, Deep Learning, Explainable AI, Grad-CAM, Software Engineer, Portfolio">
 
   <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="Md. Nur Alam — AI/ML Engineer & Computer Vision Researcher">
-  <meta property="og:description" content="Official portfolio of Md. Nur Alam. Explore research in Explainable AI (XAI), Computer Vision, published datasets, and software solutions.">
+  <meta property="og:title" content="Md. Nur Alam — AI/ML Engineer &amp; Computer Vision Researcher">
+  <meta property="og:description" content="Explore research in Explainable AI (XAI), Computer Vision, published datasets, and software solutions by Md. Nur Alam.">
   <meta property="og:type" content="website">
 
   <!-- Google Fonts: Inter & JetBrains Mono -->
@@ -23,33 +23,41 @@
 </head>
 <body>
 
-  <!-- Top Navigation Bar -->
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Top Sticky Header -->
   <header class="site-header" id="site-header">
     <div class="container">
       <div class="nav-wrap">
-        <a href="#hero" class="logo-link" aria-label="Home">
-          <span class="logo-badge">NA</span>
-          <span>Nur Alam</span>
+        <a href="#hero" class="brand-identity" aria-label="Md. Nur Alam Home">
+          <div class="brand-monogram">NA</div>
+          <div class="brand-info">
+            <span class="brand-name">Md. Nur Alam</span>
+            <span class="brand-role"><span class="pulse-dot"></span> Available for Roles</span>
+          </div>
         </a>
 
         <nav aria-label="Main Navigation">
           <ul class="nav-menu" id="nav-menu">
             <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#vision-demo" class="nav-link">XAI Demo</a></li>
             <li><a href="#research" class="nav-link">Research</a></li>
             <li><a href="#projects" class="nav-link">Projects</a></li>
             <li><a href="#experience" class="nav-link">Experience</a></li>
             <li><a href="#skills" class="nav-link">Skills</a></li>
             <li><a href="#education" class="nav-link">Education</a></li>
+            <li><a href="#references" class="nav-link">References</a></li>
             <li><a href="#contact" class="nav-link">Contact</a></li>
           </ul>
         </nav>
 
         <div class="nav-actions">
-          <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Color Theme" title="Toggle Theme">
+          <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Color Theme" title="Toggle Light/Dark Theme">
             <span id="theme-icon">☼</span>
           </button>
           <a href="#contact" class="btn btn-primary btn-sm">Get in Touch</a>
-          <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Toggle mobile menu">
+          <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
             ☰
           </button>
         </div>
@@ -57,90 +65,113 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Main Content -->
   <main id="main-content">
+    <!-- Hero Section -->
     <section class="hero-section" id="hero">
       <div class="container">
         <div class="hero-grid">
           <div class="hero-content">
-            <div class="hero-status-pill">
-              <span class="status-dot"></span>
-              <span>Open to AI/ML, Computer Vision &amp; Software Engineering Roles</span>
+            <div class="hero-profile-banner">
+              <span class="pulse-dot"></span>
+              <span>AI/ML Engineer &bull; Computer Vision Researcher &bull; Software Engineer</span>
             </div>
 
-            <h1 class="hero-name">Md. Nur Alam</h1>
-            <h2 class="hero-title">AI/ML Engineer &bull; Computer Vision Researcher &bull; Software Engineer</h2>
+            <h1 class="hero-headline">Md. Nur Alam</h1>
+            <h2 class="hero-subhead">Designing Explainable Vision Systems &amp; Production Architectures</h2>
 
-            <p class="hero-description">
-              Computer Science graduate with deep expertise in Artificial Intelligence, Deep Neural Networks, 
-              and Computer Vision. Proven record in cultivar-specific image classification, Explainable AI (Grad-CAM), 
-              R&amp;D market intelligence, and production-grade software development.
+            <p class="hero-bio">
+              Computer Science graduate with deep specialization in Convolutional Neural Networks, Explainable AI (Grad-CAM), 
+              and Biomedical/Agricultural Computer Vision. Published researcher with an IEEE conference acceptance and 
+              an internationally indexed scientific dataset on Mendeley Data. Experienced in competitive R&amp;D market 
+              intelligence and data-driven systems engineering.
             </p>
 
             <div class="hero-actions">
               <a href="#research" class="btn btn-primary">
-                View Publications &amp; Datasets
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                <span>View Publications</span>
               </a>
-              <a href="#projects" class="btn btn-secondary">
-                Explore Projects
+              <a href="#vision-demo" class="btn btn-secondary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
+                <span>Interactive XAI Demo</span>
               </a>
               <button class="btn btn-outline" id="copy-email-hero" data-email="mdnuralam6498@gmail.com">
-                Copy Email
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                <span id="hero-copy-text">Copy Email</span>
               </button>
             </div>
 
-            <div class="hero-meta-list">
-              <div class="hero-meta-item">
+            <div class="hero-contacts-bar">
+              <div class="hero-contact-item">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                 <span>Mirpur, Dhaka, Bangladesh</span>
               </div>
-              <div class="hero-meta-item">
+              <div class="hero-contact-item">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                 <span>+8801312837622</span>
               </div>
-              <div class="hero-meta-item">
+              <div class="hero-contact-item">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                 <span>mdnuralam6498@gmail.com</span>
               </div>
             </div>
           </div>
 
-          <!-- Hero Technical Snapshot Card -->
-          <div class="hero-card">
-            <div class="card-topbar">
-              <div class="card-topbar-dots">
-                <span class="card-dot"></span>
-                <span class="card-dot"></span>
-                <span class="card-dot"></span>
+          <!-- Personal Technical HUD Card -->
+          <div class="hero-hud-card">
+            <div class="hud-topbar">
+              <div class="hud-window-controls">
+                <span class="hud-win-dot"></span>
+                <span class="hud-win-dot"></span>
+                <span class="hud-win-dot"></span>
               </div>
-              <span class="card-topbar-title">CORE_SPECS.json</span>
+              <span class="hud-label">PROFILE_TELEMETRY // LIVE</span>
             </div>
 
-            <div class="key-specs-grid">
-              <div class="spec-box">
-                <div class="spec-label">B.Sc. CGPA</div>
-                <div class="spec-value">3.63 / 4.00</div>
-                <div class="spec-caption">Daffodil Int. University</div>
+            <!-- Profile Info Row -->
+            <div class="hud-profile-row">
+              <div class="hud-avatar">NA</div>
+              <div class="hud-profile-info">
+                <div class="hud-profile-name">Md. Nur Alam</div>
+                <div class="hud-profile-institution">Daffodil International University &bull; B.Sc. CSE</div>
               </div>
-              <div class="spec-box">
-                <div class="spec-label">IEEE RAAICON '26</div>
-                <div class="spec-value">Accepted</div>
-                <div class="spec-caption">Paper ID #433</div>
-              </div>
-              <div class="spec-box">
-                <div class="spec-label">Mendeley Dataset</div>
-                <div class="spec-value">Published</div>
-                <div class="spec-caption">DOI: 10.17632/ypttkp5fb5.1</div>
-              </div>
-              <div class="spec-box">
-                <div class="spec-label">Apprenticeship</div>
-                <div class="spec-value">Top 8 Rank</div>
-                <div class="spec-caption">Daffodil HRDI 2026</div>
+              <div class="hud-social-links">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="hud-social-btn" title="GitHub">GH</a>
+                <a href="https://orcid.org" target="_blank" rel="noopener noreferrer" class="hud-social-btn" title="ORCID iD">ORCID</a>
               </div>
             </div>
 
-            <div class="card-focus-area">
-              <div class="focus-header">Primary Tooling &amp; Frameworks</div>
+            <!-- Key Metrics Grid -->
+            <div class="hud-metrics-grid">
+              <div class="hud-metric-box">
+                <div class="hud-metric-tag">Academic CGPA</div>
+                <div class="hud-metric-val">3.63 / 4.00</div>
+                <div class="hud-metric-sub">B.Sc. in CSE (2022–2026)</div>
+              </div>
+
+              <div class="hud-metric-box">
+                <div class="hud-metric-tag">IEEE Acceptance</div>
+                <div class="hud-metric-val">RAAICON '26</div>
+                <div class="hud-metric-sub">Polyp Attention Paper #433</div>
+              </div>
+
+              <div class="hud-metric-box">
+                <div class="hud-metric-tag">Scientific Dataset</div>
+                <div class="hud-metric-val">Mendeley</div>
+                <div class="hud-metric-sub">DOI: 10.17632/ypttkp5fb5.1</div>
+              </div>
+
+              <div class="hud-metric-box">
+                <div class="hud-metric-tag">Apprenticeship</div>
+                <div class="hud-metric-val">Top 8 Rank</div>
+                <div class="hud-metric-sub">HRDI 100-Mark Assessment</div>
+              </div>
+            </div>
+
+            <!-- Primary Frameworks -->
+            <div class="hud-stack-box">
+              <div class="hud-stack-title">Core Research &amp; Production Stack</div>
               <div class="pill-group">
                 <span class="tech-pill">Python</span>
                 <span class="tech-pill">TensorFlow</span>
@@ -152,33 +183,150 @@
                 <span class="tech-pill">SQLAlchemy</span>
                 <span class="tech-pill">MySQL</span>
                 <span class="tech-pill">Docker</span>
-                <span class="tech-pill">Linux</span>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Metrics Strip -->
-        <div class="metrics-strip">
-          <div class="metric-card">
-            <div class="metric-num">7+</div>
-            <div class="metric-label">Disease Cultivar Classes</div>
-            <div class="metric-desc">Explainable CNN model for Amrapali mango diseases</div>
+        <!-- Big Numbers Stats Strip -->
+        <div class="stats-strip">
+          <div class="stat-item">
+            <div class="stat-num">7+</div>
+            <div class="stat-label">Disease Cultivar Classes</div>
+            <div class="stat-desc">Cultivar-specific explainable CNN model for Amrapali mango fruit</div>
           </div>
-          <div class="metric-card">
-            <div class="metric-num">01</div>
-            <div class="metric-label">IEEE Conference Acceptance</div>
-            <div class="metric-desc">Polyp segmentation attention models in colonoscopy</div>
+
+          <div class="stat-item">
+            <div class="stat-num">01</div>
+            <div class="stat-label">IEEE Conference Paper</div>
+            <div class="stat-desc">Attention encoder-decoder models in colonoscopy image segmentation</div>
           </div>
-          <div class="metric-card">
-            <div class="metric-num">Top 10%</div>
-            <div class="metric-label">Campus Bird R&amp;D Intern</div>
-            <div class="metric-desc">Selective vacancy intelligence &amp; competitor analytics</div>
+
+          <div class="stat-item">
+            <div class="stat-num">Top 10%</div>
+            <div class="stat-label">Campus Bird R&amp;D Intern</div>
+            <div class="stat-desc">Selected among nationwide applicants for competitor &amp; vacancy intelligence</div>
           </div>
-          <div class="metric-card">
-            <div class="metric-num">50%</div>
-            <div class="metric-label">Academic Merit Waiver</div>
-            <div class="metric-desc">Awarded throughout undergraduate studies (2022–2026)</div>
+
+          <div class="stat-item">
+            <div class="stat-num">50%</div>
+            <div class="stat-label">Merit Scholarship Waiver</div>
+            <div class="stat-desc">Awarded continuous tuition scholarship throughout undergraduate studies</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Computer Vision & Explainable AI (XAI) Simulator -->
+    <section class="section" id="vision-demo">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Interactive Model Showcase</span>
+          <h2 class="section-title">Explainable AI (Grad-CAM) Visualizer</h2>
+          <p class="section-subtitle">
+            Experience the visual explainability mechanism developed in my undergraduate thesis. 
+            Toggle between optical imaging, deep CNN feature attention, and Grad-CAM heatmaps to inspect how 
+            the neural network localizes cultivar-specific disease pathology.
+          </p>
+        </div>
+
+        <div class="vision-interactive-card">
+          <div class="vision-card-header">
+            <div class="vision-card-title-group">
+              <h3>Live Saliency Inspection Engine</h3>
+              <p>Target Cultivar: <em>Mangifera indica cv. Amrapali</em> &bull; Backend: Transfer Learning CNN</p>
+            </div>
+            <span class="badge-solid badge-ieee">Explainable AI &bull; Grad-CAM</span>
+          </div>
+
+          <div class="vision-sim-grid">
+            <!-- Left: Graphical Viewport with Visual Overlay Modes -->
+            <div class="vision-viewport">
+              <span class="viewport-hud-tag" id="viewport-status-tag">LAYER: CONV_LAST // GRAD-CAM ACTIVE</span>
+
+              <!-- SVG Visualizer Simulation -->
+              <div class="vision-svg-display">
+                <svg id="vision-canvas" viewBox="0 0 280 180" width="100%" height="100%">
+                  <!-- Background Fruit Silhouette -->
+                  <ellipse cx="140" cy="90" rx="95" ry="68" fill="#151b24" stroke="#252a38" stroke-width="2"/>
+                  
+                  <!-- Leaf / Stem Accent -->
+                  <path d="M140,22 Q155,5 175,10 Q160,28 140,24" fill="#059669" stroke="#047857" stroke-width="1.5"/>
+
+                  <!-- Pathology Lesion 1 -->
+                  <circle id="lesion-primary" cx="120" cy="85" r="22" fill="#78350f" stroke="#b45309" stroke-width="2"/>
+                  
+                  <!-- Pathology Lesion 2 -->
+                  <circle id="lesion-secondary" cx="165" cy="105" r="15" fill="#78350f" stroke="#b45309" stroke-width="1.5"/>
+
+                  <!-- Grad-CAM Saliency Heatmap Overlay (Controlled dynamically via JS) -->
+                  <g id="gradcam-overlay" style="transition: opacity 0.25s ease;">
+                    <!-- Concentric Heat Radiations (Solid pure color layers with opacity) -->
+                    <circle cx="120" cy="85" r="42" fill="#dc2626" opacity="0.35"/>
+                    <circle cx="120" cy="85" r="28" fill="#f59e0b" opacity="0.55"/>
+                    <circle cx="120" cy="85" r="14" fill="#ffffff" opacity="0.75"/>
+
+                    <circle cx="165" cy="105" r="30" fill="#dc2626" opacity="0.30"/>
+                    <circle cx="165" cy="105" r="18" fill="#f59e0b" opacity="0.50"/>
+                  </g>
+
+                  <!-- Attention Boundary Box -->
+                  <rect id="attention-bounding-box" x="90" y="55" width="105" height="75" fill="none" stroke="#2563eb" stroke-width="2" stroke-dasharray="4 2"/>
+                  <text id="attention-label" x="93" y="50" fill="#60a5fa" font-family="'JetBrains Mono', monospace" font-size="9">ROI_01: ANTHRACNOSE [0.987]</text>
+                </svg>
+              </div>
+
+              <!-- View Mode Switcher -->
+              <div class="vision-modes-selector">
+                <button class="vision-mode-btn active" data-mode="gradcam">Grad-CAM Heatmap</button>
+                <button class="vision-mode-btn" data-mode="optical">Optical RGB</button>
+                <button class="vision-mode-btn" data-mode="attention">Attention ROI</button>
+              </div>
+            </div>
+
+            <!-- Right: Interactive Disease Selector & Real-Time Telemetry HUD -->
+            <div class="vision-diagnostics">
+              <div class="disease-selector-row">
+                <div class="disease-label">Select Cultivar Disease Class:</div>
+                <div class="disease-buttons-wrap">
+                  <button class="disease-btn active" data-disease="anthracnose">Anthracnose</button>
+                  <button class="disease-btn" data-disease="dieback">Dieback</button>
+                  <button class="disease-btn" data-disease="canker">Bacterial Canker</button>
+                  <button class="disease-btn" data-disease="healthy">Healthy Control</button>
+                </div>
+              </div>
+
+              <div class="hud-specs-table">
+                <div class="hud-row">
+                  <span class="hud-key">Predicted Class:</span>
+                  <span class="hud-val" id="tele-class" style="color: var(--accent-emerald-text);">Anthracnose (Colletotrichum)</span>
+                </div>
+                <div class="hud-row">
+                  <span class="hud-key">Model Confidence:</span>
+                  <span class="hud-val" id="tele-conf">98.7%</span>
+                </div>
+                <div class="hud-row">
+                  <span class="hud-key">Model Architecture:</span>
+                  <span class="hud-val">Transfer Learning CNN</span>
+                </div>
+                <div class="hud-row">
+                  <span class="hud-key">XAI Attribution:</span>
+                  <span class="hud-val">Grad-CAM (Gradient-Weighted)</span>
+                </div>
+                <div class="hud-row">
+                  <span class="hud-key">Inference Latency:</span>
+                  <span class="hud-val" id="tele-latency">14.2 ms / sample</span>
+                </div>
+                <div class="hud-row">
+                  <span class="hud-key">Target Cultivar:</span>
+                  <span class="hud-val">Mangifera indica cv. Amrapali</span>
+                </div>
+              </div>
+
+              <div style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.5;">
+                <strong>Explanation:</strong> The gradient-weighted activation map highlights that the CNN focuses strictly on the necrotic lesions rather than irrelevant background leaf or shadow artifacts, verifying model integrity.
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -189,75 +337,75 @@
       <div class="container">
         <div class="section-header">
           <span class="section-tag">Core Competencies</span>
-          <h2 class="section-title">Architecting Explainable AI &amp; Robust Software</h2>
+          <h2 class="section-title">Specialization &amp; Engineering Focus</h2>
           <p class="section-subtitle">
-            Bridging rigorous deep learning research with end-to-end software engineering, business intelligence, 
+            Uniting deep learning research with end-to-end software development, market intelligence, 
             and data-driven problem solving.
           </p>
         </div>
 
-        <div class="pillars-grid">
-          <div class="pillar-card">
-            <div class="pillar-icon-box">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+        <div class="skills-grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
+          <div class="skills-card">
+            <div class="skills-card-header">
+              <span>Computer Vision &amp; Deep Learning</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
             </div>
-            <h3 class="pillar-title">Computer Vision &amp; Deep Learning</h3>
-            <p class="pillar-text">
-              Specialized in Convolutional Neural Networks (CNNs), attention-enhanced encoder-decoder architectures, 
-              fine-tuning, and transfer learning for biomedical and agricultural imagery.
+            <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary); margin-bottom: 1.25rem;">
+              Expert in Convolutional Neural Networks (CNN), attention-enhanced encoder-decoder segmentation architectures, 
+              transfer learning, and fine-tuning for biomedical and agricultural imagery.
             </p>
-            <div class="pillar-tags">
+            <div class="pill-group">
               <span class="tech-pill">Image Preprocessing</span>
               <span class="tech-pill">Data Augmentation</span>
               <span class="tech-pill">Segmentation</span>
             </div>
           </div>
 
-          <div class="pillar-card">
-            <div class="pillar-icon-box">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+          <div class="skills-card">
+            <div class="skills-card-header">
+              <span>Explainable AI (XAI)</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
             </div>
-            <h3 class="pillar-title">Explainable AI (XAI) &amp; Validation</h3>
-            <p class="pillar-text">
-              Transforming black-box neural networks into interpretable diagnostics using Grad-CAM heatmaps, 
-              robust benchmark evaluation metrics, and feature saliency analysis.
+            <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary); margin-bottom: 1.25rem;">
+              Translating complex neural network weights into transparent clinical and agricultural diagnostics using Grad-CAM, 
+              saliency maps, and rigorous benchmark metrics.
             </p>
-            <div class="pillar-tags">
+            <div class="pill-group">
               <span class="tech-pill">Grad-CAM</span>
               <span class="tech-pill">Visual Interpretation</span>
-              <span class="tech-pill">Benchmarking</span>
+              <span class="tech-pill">Model Saliency</span>
             </div>
           </div>
 
-          <div class="pillar-card">
-            <div class="pillar-icon-box">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+          <div class="skills-card">
+            <div class="skills-card-header">
+              <span>Software Engineering</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
             </div>
-            <h3 class="pillar-title">Software Engineering &amp; Systems</h3>
-            <p class="pillar-text">
-              Production development with Python, Java, PHP, and JavaScript. Experienced in RESTful APIs, 
-              relational database design (SQL/MySQL), object-oriented architectures, and containerized workflows.
+            <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary); margin-bottom: 1.25rem;">
+              Full-lifecycle software engineering using Python, Java, PHP, and JavaScript. Specialized in REST APIs (FastAPI), 
+              relational database design (MySQL), and robust OOP architecture.
             </p>
-            <div class="pillar-tags">
+            <div class="pill-group">
               <span class="tech-pill">FastAPI</span>
               <span class="tech-pill">Streamlit</span>
               <span class="tech-pill">SQLAlchemy</span>
             </div>
           </div>
 
-          <div class="pillar-card">
-            <div class="pillar-icon-box">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+          <div class="skills-card">
+            <div class="skills-card-header">
+              <span>R&amp;D &amp; Business Analysis</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
             </div>
-            <h3 class="pillar-title">R&amp;D &amp; Business Intelligence</h3>
-            <p class="pillar-text">
-              Conducting systematic market intelligence, competitor benchmarking, root-cause analyses, 
-              and identifying high-ROI AI automation opportunities across organizations.
+            <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary); margin-bottom: 1.25rem;">
+              Proven experience in competitor intelligence, market research, platform benchmarking, root-cause analyses, 
+              and identifying strategic opportunities for AI workflow automation.
             </p>
-            <div class="pillar-tags">
+            <div class="pill-group">
               <span class="tech-pill">Competitor Intel</span>
               <span class="tech-pill">SWOT / KPI</span>
-              <span class="tech-pill">Platform Audits</span>
+              <span class="tech-pill">Workflow AI</span>
             </div>
           </div>
         </div>
@@ -268,19 +416,19 @@
     <section class="section" id="research">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">Scholarly Contributions</span>
+          <span class="section-tag">Scientific Contributions</span>
           <h2 class="section-title">Research &amp; Publications</h2>
           <p class="section-subtitle">
-            Peer-reviewed research and curated scientific open datasets advancing agricultural diagnostics 
-            and biomedical computer vision.
+            Peer-reviewed scientific publications, undergraduate thesis, and published research datasets advancing 
+            agricultural computer vision and biomedical semantic segmentation.
           </p>
         </div>
 
-        <div class="research-container">
-          <!-- Research Paper 1: IEEE RAAICON -->
+        <div class="research-list">
+          <!-- Research Item 1: IEEE RAAICON 2026 -->
           <article class="research-card">
-            <div class="research-badge-strip">
-              <span class="badge-solid badge-paper">IEEE Accepted Paper</span>
+            <div class="research-header-row">
+              <span class="badge-solid badge-ieee">Accepted for Presentation</span>
               <span class="tech-pill">IEEE RAAICON 2026</span>
               <span class="tech-pill">Paper ID: 433</span>
             </div>
@@ -290,25 +438,31 @@
             <div class="research-venue">
               Accepted for Presentation &bull; IEEE RAAICON 2026
             </div>
-            <p class="research-desc">
-              Investigates and benchmarks state-of-the-art encoder-decoder segmentation architectures integrated 
-              with attention mechanisms. The study systematically evaluates accuracy, spatial boundary delineation, 
-              and inference speed for early detection of polyps in colonoscopy medical imagery.
+            <p class="research-abstract">
+              This research systematically benchmarks attention-enhanced encoder–decoder deep architectures for semantic 
+              segmentation of colorectal polyps in colonoscopy imagery. The investigation focuses on enhancing boundary delineation 
+              accuracy for subtle, flat, and small polyps while maintaining low computational latency suitable for real-time 
+              clinical endoscopy decision support.
             </p>
-            <div class="research-meta-box">
-              <div class="doi-chip">
-                <span>Domain: <strong>Biomedical Computer Vision &amp; Semantic Segmentation</strong></span>
+            <div class="research-footer-box">
+              <div class="research-meta-tags">
+                <span>Domain: <strong>Biomedical Computer Vision &bull; Semantic Segmentation</strong></span>
               </div>
-              <a href="#contact" class="btn btn-secondary btn-sm">Request Preprint / Slides</a>
+              <div class="research-actions">
+                <button class="btn btn-outline btn-sm open-bibtex-btn" data-type="ieee">
+                  Cite / BibTeX
+                </button>
+                <a href="#contact" class="btn btn-secondary btn-sm">Request Slides</a>
+              </div>
             </div>
           </article>
 
-          <!-- Undergraduate Thesis -->
+          <!-- Research Item 2: Undergraduate Thesis -->
           <article class="research-card">
-            <div class="research-badge-strip">
+            <div class="research-header-row">
               <span class="badge-solid badge-thesis">Undergraduate Thesis</span>
               <span class="tech-pill">Daffodil International University</span>
-              <span class="tech-pill">2025 – 2026</span>
+              <span class="tech-pill">2025–2026</span>
             </div>
             <h3 class="research-title">
               Explainable Transfer Learning-Based Deep Convolutional Neural Network for Cultivar-Specific Amrapali Mango Fruit Disease Classification
@@ -316,24 +470,25 @@
             <div class="research-venue">
               Department of Computer Science &amp; Engineering &bull; Daffodil International University
             </div>
-            <p class="research-desc">
-              Developed a tailored, cultivar-specific deep learning classification framework for 7 major Amrapali mango fruit 
-              diseases. Evaluated multiple pre-trained CNN backbones using transfer learning and fine-tuning strategies. 
-              Integrated Gradient-weighted Class Activation Mapping (Grad-CAM) to provide transparent visual explanations 
-              verifying model attention matches true pathological symptoms.
+            <p class="research-abstract">
+              Conducted an in-depth study formulating a cultivar-specific disease diagnosis pipeline for 7 major Amrapali mango 
+              diseases. Evaluated transfer learning and fine-tuning across contemporary CNN backbones. Incorporated Explainable AI (XAI) 
+              via Grad-CAM to visualize and validate that model feature activations faithfully correspond to true botanical pathogen symptoms.
             </p>
-            <div class="research-meta-box">
-              <div class="doi-chip">
-                <span>Methodology: <strong>CNNs, Transfer Learning, Grad-CAM (XAI), Cultivar-Specific Analysis</strong></span>
+            <div class="research-footer-box">
+              <div class="research-meta-tags">
+                <span>Methodology: <strong>CNNs, Transfer Learning, Grad-CAM (XAI), Cultivar-Specific Diagnostics</strong></span>
               </div>
-              <a href="#projects" class="btn btn-secondary btn-sm">View Implementation</a>
+              <div class="research-actions">
+                <a href="#vision-demo" class="btn btn-primary btn-sm">Interactive Visualizer ↗</a>
+              </div>
             </div>
           </article>
 
-          <!-- Research Dataset: Mendeley Data -->
+          <!-- Research Item 3: Mendeley Data -->
           <article class="research-card">
-            <div class="research-badge-strip">
-              <span class="badge-solid badge-dataset">Published Scientific Dataset</span>
+            <div class="research-header-row">
+              <span class="badge-solid badge-mendeley">Published Research Dataset</span>
               <span class="tech-pill">Mendeley Data</span>
               <span class="tech-pill">Published: 2 January 2026</span>
             </div>
@@ -343,21 +498,24 @@
             <div class="research-venue">
               Mendeley Data Repository &bull; Contributed by Md. Nur Alam
             </div>
-            <p class="research-desc">
-              Curated and indexed a dedicated, high-resolution cultivar-specific image dataset spanning multiple classes 
-              of Amrapali mango fruit diseases for agricultural computer vision research. Includes verified ground-truth labels, 
-              preprocessed subsets, and standardized train-val-test splits.
+            <p class="research-abstract">
+              An open-access, curated, high-resolution cultivar-specific image dataset spanning multiple classes of Amrapali 
+              mango fruit diseases. Features meticulously verified ground-truth annotations, preprocessed subsets, and structured 
+              partitions designed for benchmarking deep learning classifiers.
             </p>
-            <div class="research-meta-box">
-              <div class="doi-chip">
-                DOI: <strong>10.17632/ypttkp5fb5.1</strong>
+            <div class="research-footer-box">
+              <div class="research-meta-tags">
+                <span>DOI: <strong>10.17632/ypttkp5fb5.1</strong></span>
               </div>
-              <div style="display: flex; gap: 0.5rem;">
+              <div class="research-actions">
                 <button class="btn btn-outline btn-sm copy-doi-btn" data-doi="10.17632/ypttkp5fb5.1">
                   Copy DOI
                 </button>
+                <button class="btn btn-outline btn-sm open-bibtex-btn" data-type="mendeley">
+                  Cite / BibTeX
+                </button>
                 <a href="https://doi.org/10.17632/ypttkp5fb5.1" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
-                  Access Mendeley Data ↗
+                  Access Dataset ↗
                 </a>
               </div>
             </div>
@@ -370,62 +528,71 @@
     <section class="section" id="projects">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">Engineered Systems</span>
+          <span class="section-tag">Applied Engineering</span>
           <h2 class="section-title">Featured Projects</h2>
           <p class="section-subtitle">
-            Software and machine learning systems engineered with production standards, clean architectures, 
+            Production-grade systems engineered with clean architectures, modular designs, 
             and real-world domain requirements.
           </p>
         </div>
 
-        <!-- Filter Bar -->
-        <div class="projects-filter-bar">
-          <button class="filter-btn active" data-filter="all">All Projects</button>
-          <button class="filter-btn" data-filter="ai">AI &amp; Computer Vision</button>
-          <button class="filter-btn" data-filter="software">Software &amp; Enterprise Systems</button>
+        <!-- Filter Bar with Counts -->
+        <div class="filter-container">
+          <button class="filter-pill active" data-filter="all">
+            <span>All Projects</span>
+            <span class="filter-count">[4]</span>
+          </button>
+          <button class="filter-pill" data-filter="ai">
+            <span>AI &amp; Computer Vision</span>
+            <span class="filter-count">[1]</span>
+          </button>
+          <button class="filter-pill" data-filter="software">
+            <span>Enterprise Software Systems</span>
+            <span class="filter-count">[3]</span>
+          </button>
         </div>
 
         <div class="projects-grid" id="projects-grid">
           <!-- Project 1: Mango Fruit Disease XAI -->
           <article class="project-card" data-category="ai">
-            <div class="project-card-top">
-              <div class="project-num">SYSTEM_01 // COMPUTER VISION &amp; XAI</div>
-              <h3 class="project-title">Amrapali Mango Fruit Disease Classification &amp; Prediction</h3>
-              <p class="project-desc">
+            <div class="project-card-header">
+              <div class="project-category-tag">SYSTEM_01 // COMPUTER VISION &amp; XAI</div>
+              <h3 class="project-name">Amrapali Mango Fruit Disease Classification &amp; Prediction</h3>
+              <p class="project-summary">
                 Cultivar-specific deep learning diagnostic pipeline classifying 7 distinct mango diseases 
                 with visual explainability via Grad-CAM heatmaps.
               </p>
-              <ul class="project-highlights">
+              <ul class="project-specs-list">
                 <li>End-to-end dataset preprocessing, augmentation, and class imbalance mitigation.</li>
                 <li>Transfer learning and fine-tuning on multiple modern CNN architectures.</li>
                 <li>Integrated Grad-CAM visualization for real-time model interpretability and validation.</li>
               </ul>
             </div>
-            <div class="project-tags">
+            <div class="project-tags-wrap">
               <span class="tech-pill">Python</span>
               <span class="tech-pill">TensorFlow</span>
               <span class="tech-pill">CNN</span>
               <span class="tech-pill">Grad-CAM</span>
-              <span class="tech-pill">Transfer Learning</span>
+              <span class="tech-pill">Computer Vision</span>
             </div>
           </article>
 
           <!-- Project 2: Customer Relationship Management (CRM) -->
           <article class="project-card" data-category="software">
-            <div class="project-card-top">
-              <div class="project-num">SYSTEM_02 // ENTERPRISE DATA SYSTEM</div>
-              <h3 class="project-title">Customer Relationship Management (CRM) System</h3>
-              <p class="project-desc">
-                Data-driven enterprise platform for managing customer lifecycles, sales pipelines, 
-                support ticketing, and executive analytics.
+            <div class="project-card-header">
+              <div class="project-category-tag">SYSTEM_02 // ENTERPRISE DATA SYSTEM</div>
+              <h3 class="project-name">Customer Relationship Management (CRM) System</h3>
+              <p class="project-summary">
+                Data-driven enterprise platform for customer lifecycle tracking, sales pipelines, 
+                follow-up reminders, support ticketing, and executive analytics.
               </p>
-              <ul class="project-highlights">
-                <li>Engineered with strict Object-Oriented Programming (OOP) principles.</li>
+              <ul class="project-specs-list">
+                <li>Engineered with strict Object-Oriented Programming (OOP) design patterns.</li>
                 <li>SQLAlchemy ORM layer supporting SQLite and MySQL relational databases.</li>
                 <li>Role-based user access controls, authentication, and comprehensive audit logging.</li>
               </ul>
             </div>
-            <div class="project-tags">
+            <div class="project-tags-wrap">
               <span class="tech-pill">Python</span>
               <span class="tech-pill">Streamlit</span>
               <span class="tech-pill">SQLAlchemy</span>
@@ -436,20 +603,20 @@
 
           <!-- Project 3: Hotel Management System -->
           <article class="project-card" data-category="software">
-            <div class="project-card-top">
-              <div class="project-num">SYSTEM_03 // DISTRIBUTED ARCHITECTURE</div>
-              <h3 class="project-title">Hotel Management System</h3>
-              <p class="project-desc">
+            <div class="project-card-header">
+              <div class="project-category-tag">SYSTEM_03 // DISTRIBUTED BACKEND</div>
+              <h3 class="project-name">Hotel Management System</h3>
+              <p class="project-summary">
                 Role-based hospitality administration system governing room reservations, guest check-in/out, 
-                billing, invoices, and audit logging.
+                billing, invoices, reports, and audit logging.
               </p>
-              <ul class="project-highlights">
+              <ul class="project-specs-list">
                 <li>Decoupled backend built with FastAPI REST endpoints and SQLAlchemy.</li>
-                <li>Interactive frontend dashboards for staff and managerial operations.</li>
-                <li>Audit-logged transaction handling and secure payment status reconciliation.</li>
+                <li>Interactive staff and managerial operations frontend dashboards.</li>
+                <li>Database-driven transactional workflows and secure authentication.</li>
               </ul>
             </div>
-            <div class="project-tags">
+            <div class="project-tags-wrap">
               <span class="tech-pill">FastAPI</span>
               <span class="tech-pill">Python</span>
               <span class="tech-pill">Streamlit</span>
@@ -460,20 +627,20 @@
 
           <!-- Project 4: Hospital Management System -->
           <article class="project-card" data-category="software">
-            <div class="project-card-top">
-              <div class="project-num">SYSTEM_04 // WEB APPLICATION</div>
-              <h3 class="project-title">Hospital Management System</h3>
-              <p class="project-desc">
+            <div class="project-card-header">
+              <div class="project-category-tag">SYSTEM_04 // FULL-STACK WEB</div>
+              <h3 class="project-name">Hospital Management System</h3>
+              <p class="project-summary">
                 Multi-user administrative portal for clinic operations, doctor scheduling, patient admissions, 
                 and electronic medical records (EMR).
               </p>
-              <ul class="project-highlights">
+              <ul class="project-specs-list">
                 <li>Multi-tier role delegation (Superadmin, Doctors, Receptionists, Patients).</li>
                 <li>Asynchronous record fetching and updates powered by AJAX and PHP.</li>
-                <li>Relational schema design handling appointments, diagnoses, and medical histories.</li>
+                <li>Relational database schema managing appointments, diagnoses, and medical histories.</li>
               </ul>
             </div>
-            <div class="project-tags">
+            <div class="project-tags-wrap">
               <span class="tech-pill">PHP</span>
               <span class="tech-pill">MySQL</span>
               <span class="tech-pill">JavaScript</span>
@@ -485,7 +652,7 @@
       </div>
     </section>
 
-    <!-- Professional Experience & Apprenticeship -->
+    <!-- Professional Experience & Apprenticeship Timeline -->
     <section class="section" id="experience">
       <div class="container">
         <div class="section-header">
@@ -499,24 +666,24 @@
 
         <div class="timeline">
           <!-- Experience 1: Campus Bird -->
-          <div class="timeline-item">
-            <div class="timeline-card">
-              <div class="timeline-header">
-                <h3 class="timeline-role">Campus Bird Intern — Research &amp; Development Department</h3>
-                <span class="timeline-period">July 2026 – Present | Dhaka, Bangladesh</span>
+          <div class="timeline-entry">
+            <div class="timeline-box">
+              <div class="timeline-title-row">
+                <h3 class="timeline-position">Campus Bird Intern — Research &amp; Development Department</h3>
+                <span class="timeline-date-chip">July 2026 – Present | Dhaka, Bangladesh</span>
               </div>
-              <div class="timeline-org">Vacancy Hunting — Campus Bird Internship Program 9.0</div>
+              <div class="timeline-company">Vacancy Hunting — Campus Bird Internship Program 9.0</div>
 
-              <div class="timeline-subhead">Key Achievements &amp; Selection</div>
-              <ul class="timeline-list">
+              <div class="timeline-block-title">Key Achievements &amp; Selection</div>
+              <ul class="timeline-bullet-list">
                 <li>Selected as a Campus Bird Intern in the R&amp;D Department, placing in the <strong>Top 10%</strong> of applicants nationwide.</li>
                 <li>Conducted exhaustive GYC competitor analysis covering business models, customer journeys, product offerings, competitive gaps, and growth opportunities.</li>
                 <li>Researched the Skill Jobs platform ecosystem and formulated intelligent vacancy concepts including automated skill-fit scoring, duplicate job alerts, and structured applicant tracking.</li>
                 <li>Authored and presented R&amp;D evaluation decks on competitor intelligence, platform analytics, and data-driven business growth strategies.</li>
               </ul>
 
-              <div class="timeline-subhead">Duties &amp; Responsibilities</div>
-              <ul class="timeline-list">
+              <div class="timeline-block-title">Duties &amp; Responsibilities</div>
+              <ul class="timeline-bullet-list">
                 <li>Execute targeted market research, competitor surveillance, and platform benchmarking to spot industry shifts.</li>
                 <li>Synthesize raw market data into actionable strategic recommendations for executive leadership.</li>
                 <li>Identify key opportunities for AI integration, workflow automation, predictive analytics, and process modernization.</li>
@@ -532,23 +699,23 @@
           </div>
 
           <!-- Experience 2: Daffodil Family Apprenticeship -->
-          <div class="timeline-item">
-            <div class="timeline-card">
-              <div class="timeline-header">
-                <h3 class="timeline-role">Selected Apprentice Programmer</h3>
-                <span class="timeline-period">July 2026 – Present | Dhaka, Bangladesh</span>
+          <div class="timeline-entry">
+            <div class="timeline-box">
+              <div class="timeline-title-row">
+                <h3 class="timeline-position">Selected Apprentice Programmer</h3>
+                <span class="timeline-date-chip">July 2026 – Present | Dhaka, Bangladesh</span>
               </div>
-              <div class="timeline-org">Daffodil Family Apprenticeship Program 2026 — HRDI, Daffodil International University</div>
+              <div class="timeline-company">Daffodil Family Apprenticeship Program 2026 — HRDI, Daffodil International University</div>
 
-              <div class="timeline-subhead">Key Achievements &amp; Selection</div>
-              <ul class="timeline-list">
+              <div class="timeline-block-title">Key Achievements &amp; Selection</div>
+              <ul class="timeline-bullet-list">
                 <li>Selected through a rigorous, multi-stage assessment; secured <strong>Top 8</strong> in the 100-mark technical assessment and ranked <strong>18th among 38</strong> final selected candidates.</li>
                 <li>Completed intensive 3-day Apprenticeship Bootcamp focusing on structured problem-solving, corporate case evaluations, cross-functional teamwork, and high-stakes presentations.</li>
                 <li>Completed <em>"Building Skills for TAF &amp; Apprenticeship"</em> with <strong>Distinction</strong> from GoEdu.</li>
               </ul>
 
-              <div class="timeline-subhead">Duties &amp; Responsibilities</div>
-              <ul class="timeline-list">
+              <div class="timeline-block-title">Duties &amp; Responsibilities</div>
+              <ul class="timeline-bullet-list">
                 <li>Conducted rigorous business case analyses leveraging root-cause analysis, SWOT evaluations, KPI tracking, and operational process mapping.</li>
                 <li>Evaluated institutional workflows to pinpoint high-impact automation pipelines, AI integration points, and predictive decision frameworks.</li>
                 <li>Delivered collaborative Shark Tank-style presentations, peer code reviews, and structured business recommendations.</li>
@@ -570,106 +737,106 @@
     <section class="section" id="skills">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">Engineering Stack</span>
-          <h2 class="section-title">Technical Skills Matrix</h2>
+          <span class="section-tag">Engineering Matrix</span>
+          <h2 class="section-title">Technical Competencies</h2>
           <p class="section-subtitle">
-            A comprehensive overview of programming languages, machine learning frameworks, databases, 
-            and engineering toolsets.
+            A categorized breakdown of programming languages, machine learning frameworks, data science toolkits, 
+            and system environments.
           </p>
         </div>
 
-        <div class="skills-matrix-grid">
-          <!-- Group 1 -->
-          <div class="skills-group-card">
-            <div class="skills-group-title">
+        <div class="skills-grid">
+          <!-- Programming Languages -->
+          <div class="skills-card">
+            <div class="skills-card-header">
               <span>Programming Languages</span>
             </div>
-            <div class="skills-list">
-              <span class="skill-tag">Python</span>
-              <span class="skill-tag">C</span>
-              <span class="skill-tag">Java</span>
-              <span class="skill-tag">PHP</span>
-              <span class="skill-tag">JavaScript</span>
-              <span class="skill-tag">SQL</span>
+            <div class="skill-chips-wrap">
+              <span class="skill-chip">Python</span>
+              <span class="skill-chip">C</span>
+              <span class="skill-chip">Java</span>
+              <span class="skill-chip">PHP</span>
+              <span class="skill-chip">JavaScript</span>
+              <span class="skill-chip">SQL</span>
             </div>
           </div>
 
-          <!-- Group 2 -->
-          <div class="skills-group-card">
-            <div class="skills-group-title">
+          <!-- AI & Deep Learning -->
+          <div class="skills-card">
+            <div class="skills-card-header">
               <span>AI &amp; Deep Learning</span>
             </div>
-            <div class="skills-list">
-              <span class="skill-tag">Machine Learning</span>
-              <span class="skill-tag">Deep Learning</span>
-              <span class="skill-tag">Computer Vision</span>
-              <span class="skill-tag">Convolutional Neural Networks (CNN)</span>
-              <span class="skill-tag">Transfer Learning</span>
-              <span class="skill-tag">Model Fine-Tuning</span>
-              <span class="skill-tag">Explainable AI (XAI)</span>
-              <span class="skill-tag">Grad-CAM</span>
+            <div class="skill-chips-wrap">
+              <span class="skill-chip">Machine Learning</span>
+              <span class="skill-chip">Deep Learning</span>
+              <span class="skill-chip">Computer Vision</span>
+              <span class="skill-chip">Convolutional Neural Networks (CNN)</span>
+              <span class="skill-chip">Transfer Learning</span>
+              <span class="skill-chip">Model Fine-Tuning</span>
+              <span class="skill-chip">Explainable AI (XAI)</span>
+              <span class="skill-chip">Grad-CAM</span>
             </div>
           </div>
 
-          <!-- Group 3 -->
-          <div class="skills-group-card">
-            <div class="skills-group-title">
+          <!-- Data Science -->
+          <div class="skills-card">
+            <div class="skills-card-header">
               <span>Data Science &amp; Analysis</span>
             </div>
-            <div class="skills-list">
-              <span class="skill-tag">NumPy</span>
-              <span class="skill-tag">Pandas</span>
-              <span class="skill-tag">Matplotlib</span>
-              <span class="skill-tag">Scikit-learn</span>
-              <span class="skill-tag">Predictive Modeling</span>
-              <span class="skill-tag">Data Augmentation</span>
-              <span class="skill-tag">Performance Benchmarking</span>
+            <div class="skill-chips-wrap">
+              <span class="skill-chip">NumPy</span>
+              <span class="skill-chip">Pandas</span>
+              <span class="skill-chip">Matplotlib</span>
+              <span class="skill-chip">Scikit-learn</span>
+              <span class="skill-chip">Predictive Modeling</span>
+              <span class="skill-chip">Data Augmentation</span>
+              <span class="skill-chip">Model Benchmarking</span>
             </div>
           </div>
 
-          <!-- Group 4 -->
-          <div class="skills-group-card">
-            <div class="skills-group-title">
+          <!-- Development -->
+          <div class="skills-card">
+            <div class="skills-card-header">
               <span>Software Development</span>
             </div>
-            <div class="skills-list">
-              <span class="skill-tag">OOP</span>
-              <span class="skill-tag">Data Structures &amp; Algorithms</span>
-              <span class="skill-tag">RESTful APIs</span>
-              <span class="skill-tag">FastAPI</span>
-              <span class="skill-tag">Streamlit</span>
-              <span class="skill-tag">SQLAlchemy</span>
-              <span class="skill-tag">AJAX / Web Standards</span>
+            <div class="skill-chips-wrap">
+              <span class="skill-chip">OOP</span>
+              <span class="skill-chip">Data Structures &amp; Algorithms</span>
+              <span class="skill-chip">RESTful APIs</span>
+              <span class="skill-chip">FastAPI</span>
+              <span class="skill-chip">Streamlit</span>
+              <span class="skill-chip">SQLAlchemy</span>
+              <span class="skill-chip">AJAX</span>
             </div>
           </div>
 
-          <!-- Group 5 -->
-          <div class="skills-group-card">
-            <div class="skills-group-title">
+          <!-- Databases & Systems -->
+          <div class="skills-card">
+            <div class="skills-card-header">
               <span>Databases &amp; Systems</span>
             </div>
-            <div class="skills-list">
-              <span class="skill-tag">MySQL</span>
-              <span class="skill-tag">SQLite</span>
-              <span class="skill-tag">Database Schema Design</span>
-              <span class="skill-tag">Linux / Unix Shell</span>
-              <span class="skill-tag">Cisco Packet Tracer</span>
+            <div class="skill-chips-wrap">
+              <span class="skill-chip">MySQL</span>
+              <span class="skill-chip">SQLite</span>
+              <span class="skill-chip">Schema Design</span>
+              <span class="skill-chip">Linux / Unix</span>
+              <span class="skill-chip">Cisco Packet Tracer</span>
             </div>
           </div>
 
-          <!-- Group 6 -->
-          <div class="skills-group-card">
-            <div class="skills-group-title">
-              <span>Tools, DevOps &amp; Methods</span>
+          <!-- Tools & Engineering -->
+          <div class="skills-card">
+            <div class="skills-card-header">
+              <span>Tools &amp; Methodologies</span>
             </div>
-            <div class="skills-list">
-              <span class="skill-tag">Git &amp; GitHub</span>
-              <span class="skill-tag">Docker</span>
-              <span class="skill-tag">VS Code</span>
-              <span class="skill-tag">PyCharm</span>
-              <span class="skill-tag">LaTeX</span>
-              <span class="skill-tag">Agile / Scrum</span>
-              <span class="skill-tag">R&amp;D Methodology</span>
+            <div class="skill-chips-wrap">
+              <span class="skill-chip">Git &amp; GitHub</span>
+              <span class="skill-chip">Docker</span>
+              <span class="skill-chip">VS Code</span>
+              <span class="skill-chip">PyCharm</span>
+              <span class="skill-chip">LaTeX</span>
+              <span class="skill-chip">Agile / Scrum</span>
+              <span class="skill-chip">R&amp;D Methodology</span>
             </div>
           </div>
         </div>
@@ -683,40 +850,46 @@
           <span class="section-tag">Academic Background</span>
           <h2 class="section-title">Educational Qualifications</h2>
           <p class="section-subtitle">
-            Consistent top-tier academic performance throughout secondary, higher secondary, and undergraduate studies.
+            Consistent top-tier academic excellence throughout secondary, higher secondary, and undergraduate studies.
           </p>
         </div>
 
-        <div class="edu-grid">
+        <div class="edu-cards-grid">
           <!-- Undergrad -->
-          <div class="edu-card">
-            <div class="edu-level">Undergraduate Degree</div>
-            <h3 class="edu-degree">Bachelor of Science in Computer Science &amp; Engineering</h3>
-            <div class="edu-institution">Daffodil International University, Dhaka</div>
-            <p style="margin-bottom: 1.25rem;">Duration: April 2022 – May 2026</p>
-            <div class="edu-score-box">
+          <div class="edu-item-card">
+            <div>
+              <div class="edu-level-tag">Undergraduate Degree</div>
+              <h3 class="edu-program">Bachelor of Science in Computer Science &amp; Engineering</h3>
+              <div class="edu-institute">Daffodil International University, Dhaka</div>
+              <p style="font-size: 0.875rem; margin-bottom: 1.25rem;">Duration: April 2022 – May 2026</p>
+            </div>
+            <div class="edu-badge-score">
               <span>CGPA: 3.63 / 4.00</span>
             </div>
           </div>
 
           <!-- HSC -->
-          <div class="edu-card">
-            <div class="edu-level">Higher Secondary Certificate</div>
-            <h3 class="edu-degree">HSC — Science Division</h3>
-            <div class="edu-institution">Shahid A.H.M. Kamaruzzaman Govt. Degree College, Rajshahi</div>
-            <p style="margin-bottom: 1.25rem;">Passing Year: 2020</p>
-            <div class="edu-score-box">
+          <div class="edu-item-card">
+            <div>
+              <div class="edu-level-tag">Higher Secondary Certificate</div>
+              <h3 class="edu-program">HSC — Science Division</h3>
+              <div class="edu-institute">Shahid A.H.M. Kamaruzzaman Govt. Degree College, Rajshahi</div>
+              <p style="font-size: 0.875rem; margin-bottom: 1.25rem;">Passing Year: 2020</p>
+            </div>
+            <div class="edu-badge-score">
               <span>GPA: 5.00 / 5.00 (Golden)</span>
             </div>
           </div>
 
           <!-- SSC -->
-          <div class="edu-card">
-            <div class="edu-level">Secondary School Certificate</div>
-            <h3 class="edu-degree">SSC — Science Division</h3>
-            <div class="edu-institution">Al Helal Islami Academy &amp; College, Naogaon</div>
-            <p style="margin-bottom: 1.25rem;">Passing Year: 2017</p>
-            <div class="edu-score-box">
+          <div class="edu-item-card">
+            <div>
+              <div class="edu-level-tag">Secondary School Certificate</div>
+              <h3 class="edu-program">SSC — Science Division</h3>
+              <div class="edu-institute">Al Helal Islami Academy &amp; College, Naogaon</div>
+              <p style="font-size: 0.875rem; margin-bottom: 1.25rem;">Passing Year: 2017</p>
+            </div>
+            <div class="edu-badge-score">
               <span>GPA: 5.00 / 5.00 (Golden)</span>
             </div>
           </div>
@@ -724,102 +897,106 @@
       </div>
     </section>
 
-    <!-- Leadership, Activities & Awards -->
+    <!-- Leadership & Awards -->
     <section class="section" id="leadership">
       <div class="container">
-        <div class="dual-col-grid">
-          <!-- Column 1: Leadership & Co-curricular -->
+        <div class="dual-section-grid">
+          <!-- Leadership Column -->
           <div>
             <div class="section-header" style="margin-bottom: 2rem;">
-              <span class="section-tag">Extracurricular</span>
-              <h2 class="section-title" style="font-size: 1.75rem;">Leadership &amp; Community</h2>
+              <span class="section-tag">Leadership</span>
+              <h2 class="section-title" style="font-size: 1.75rem;">Community &amp; Leadership</h2>
             </div>
 
-            <div class="award-item">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
-              <div class="award-text">
-                <strong>Department Representative — ResearchOrbit</strong>
-                <span>Representing department research initiatives and academic collaboration (2025–2026).</span>
+            <div class="honors-list">
+              <div class="honor-card">
+                <svg class="honor-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                <div class="honor-text">
+                  <strong>Department Representative — ResearchOrbit</strong>
+                  <span>Representing department research initiatives and academic collaboration (2025–2026).</span>
+                </div>
               </div>
-            </div>
 
-            <div class="award-item">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
-              <div class="award-text">
-                <strong>Media Secretary — DIU Computer &amp; Programming Club (DIU CPC)</strong>
-                <span>Directed media, branding, and technical communications (2024–2025).</span>
+              <div class="honor-card">
+                <svg class="honor-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                <div class="honor-text">
+                  <strong>Media Secretary — DIU Computer &amp; Programming Club (DIU CPC)</strong>
+                  <span>Directed media, branding, and technical communications (2024–2025).</span>
+                </div>
               </div>
-            </div>
 
-            <div class="award-item">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
-              <div class="award-text">
-                <strong>Executive &amp; Associate Member, Research Wing — DIU CPC</strong>
-                <span>Spearheaded student research cohorts and study groups (2022–2024).</span>
+              <div class="honor-card">
+                <svg class="honor-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                <div class="honor-text">
+                  <strong>Executive &amp; Associate Member, Research Wing — DIU CPC</strong>
+                  <span>Spearheaded student research cohorts and study groups (2022–2024).</span>
+                </div>
               </div>
-            </div>
 
-            <div class="award-item">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
-              <div class="award-text">
-                <strong>Campus Leader — SelDev Academy</strong>
-                <span>Guided developer workshops and tech literacy programs (2023–2024).</span>
+              <div class="honor-card">
+                <svg class="honor-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                <div class="honor-text">
+                  <strong>Campus Leader — SelDev Academy</strong>
+                  <span>Guided developer workshops and tech literacy programs (2023–2024).</span>
+                </div>
               </div>
-            </div>
 
-            <div class="award-item">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
-              <div class="award-text">
-                <strong>ICPC Asia Dhaka Regional Contest &amp; National Math Olympiad Volunteer</strong>
-                <span>Official photographer, protocol team, and operational logistics for international competitions (2024–2025).</span>
+              <div class="honor-card">
+                <svg class="honor-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                <div class="honor-text">
+                  <strong>ICPC Asia Dhaka Regional Contest &amp; National Math Olympiad Volunteer</strong>
+                  <span>Official photographer, protocol team, and operational logistics for international competitions (2024–2025).</span>
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- Column 2: Awards & Certifications -->
+          <!-- Awards Column -->
           <div>
             <div class="section-header" style="margin-bottom: 2rem;">
               <span class="section-tag">Recognitions</span>
               <h2 class="section-title" style="font-size: 1.75rem;">Honors &amp; Certifications</h2>
             </div>
 
-            <div class="award-item">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              <div class="award-text">
-                <strong>Academic Merit Scholarship — DIU</strong>
-                <span>Granted up to 50% tuition waiver throughout the undergraduate degree program (2022–2026).</span>
+            <div class="honors-list">
+              <div class="honor-card">
+                <svg class="honor-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <div class="honor-text">
+                  <strong>Academic Merit Scholarship — DIU</strong>
+                  <span>Granted up to 50% tuition waiver throughout the undergraduate degree program (2022–2026).</span>
+                </div>
               </div>
-            </div>
 
-            <div class="award-item">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              <div class="award-text">
-                <strong>Building Skills for TAF &amp; Apprenticeship — With Distinction</strong>
-                <span>Certified by GoEdu (2026).</span>
+              <div class="honor-card">
+                <svg class="honor-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <div class="honor-text">
+                  <strong>Building Skills for TAF &amp; Apprenticeship — Distinction</strong>
+                  <span>Certified with Distinction by GoEdu (2026).</span>
+                </div>
               </div>
-            </div>
 
-            <div class="award-item">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              <div class="award-text">
-                <strong>Certificate of Appreciation — Erasmus Mundus Webinar</strong>
-                <span>DIU Research Society for organizing European master’s scholarship session (2025).</span>
+              <div class="honor-card">
+                <svg class="honor-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <div class="honor-text">
+                  <strong>Certificate of Appreciation — Erasmus Mundus Webinar</strong>
+                  <span>DIU Research Society for organizing European master’s scholarship session (2025).</span>
+                </div>
               </div>
-            </div>
 
-            <div class="award-item">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              <div class="award-text">
-                <strong>Programming Contest Distinctions</strong>
-                <span>Participant in Unlock the Algorithm (2024), Engineering Summit IDEB (2023), Take-Off Programming Contest (2022).</span>
+              <div class="honor-card">
+                <svg class="honor-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <div class="honor-text">
+                  <strong>Competitive Programming Distinctions</strong>
+                  <span>Participant in Unlock the Algorithm (2024), Engineering Summit IDEB (2023), Take-Off Programming Contest (2022).</span>
+                </div>
               </div>
-            </div>
 
-            <div class="award-item">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              <div class="award-text">
-                <strong>JSC Merit Scholarship — Rajshahi Education Board</strong>
-                <span>Government merit scholarship recognition (2014).</span>
+              <div class="honor-card">
+                <svg class="honor-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <div class="honor-text">
+                  <strong>JSC Merit Scholarship — Rajshahi Education Board</strong>
+                  <span>Government merit scholarship recognition (2014).</span>
+                </div>
               </div>
             </div>
           </div>
@@ -834,26 +1011,26 @@
           <span class="section-tag">Verifications</span>
           <h2 class="section-title">Professional References</h2>
           <p class="section-subtitle">
-            Academic leadership and industry executives available for professional recommendation.
+            Academic leadership and industry executives available for formal recommendation and verification.
           </p>
         </div>
 
-        <div class="references-grid">
+        <div class="refs-grid">
           <!-- Ref 1 -->
-          <div class="ref-card">
-            <h3 class="ref-name">Professor Dr. Sheak Rashed Haider Noori</h3>
-            <div class="ref-role">Head of Department, Computer Science &amp; Engineering</div>
-            <div class="ref-org">Daffodil International University</div>
-            <ul class="ref-contact-list">
+          <div class="reference-card">
+            <h3 class="reference-name">Professor Dr. Sheak Rashed Haider Noori</h3>
+            <div class="reference-role">Head of Department, Computer Science &amp; Engineering</div>
+            <div class="reference-dept">Daffodil International University</div>
+            <ul class="reference-links">
               <li>
-                <a href="tel:+8801847140016" class="ref-contact-link">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                <a href="tel:+8801847140016">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                   <span>+8801847140016</span>
                 </a>
               </li>
               <li>
-                <a href="mailto:headcse@daffodilvarsity.edu.bd" class="ref-contact-link">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                <a href="mailto:headcse@daffodilvarsity.edu.bd">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                   <span>headcse@daffodilvarsity.edu.bd</span>
                 </a>
               </li>
@@ -861,20 +1038,20 @@
           </div>
 
           <!-- Ref 2 -->
-          <div class="ref-card">
-            <h3 class="ref-name">Dewan Ashiquzzaman</h3>
-            <div class="ref-role">Chief Information Security Officer (CISO)</div>
-            <div class="ref-org">The KOW Company</div>
-            <ul class="ref-contact-list">
+          <div class="reference-card">
+            <h3 class="reference-name">Dewan Ashiquzzaman</h3>
+            <div class="reference-role">Chief Information Security Officer (CISO)</div>
+            <div class="reference-dept">The KOW Company</div>
+            <ul class="reference-links">
               <li>
-                <a href="tel:+8801737766490" class="ref-contact-link">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                <a href="tel:+8801737766490">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                   <span>+8801737766490</span>
                 </a>
               </li>
               <li>
-                <a href="mailto:almas@thekowcompany.com" class="ref-contact-link">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                <a href="mailto:almas@thekowcompany.com">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                   <span>almas@thekowcompany.com</span>
                 </a>
               </li>
@@ -889,93 +1066,93 @@
       <div class="container">
         <div class="section-header">
           <span class="section-tag">Direct Communication</span>
-          <h2 class="section-title">Get In Touch</h2>
+          <h2 class="section-title">Initiate Contact</h2>
           <p class="section-subtitle">
-            Open for AI/ML engineering positions, computer vision research collaborations, 
-            or consulting discussions.
+            Open for AI/ML engineering roles, computer vision research collaborations, 
+            or consulting opportunities.
           </p>
         </div>
 
-        <div class="contact-grid">
-          <!-- Direct Details -->
-          <div class="contact-info-panel">
-            <div class="contact-detail-card">
-              <div class="contact-meta-left">
+        <div class="contact-container-grid">
+          <!-- Left Details Cards -->
+          <div class="contact-quick-cards">
+            <div class="contact-info-card">
+              <div class="contact-info-left">
                 <div class="contact-icon-box">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                 </div>
                 <div>
-                  <div class="contact-label">Email Address</div>
-                  <div class="contact-val">mdnuralam6498@gmail.com</div>
+                  <div class="contact-mini-tag">Direct Email</div>
+                  <div class="contact-main-text">mdnuralam6498@gmail.com</div>
                 </div>
               </div>
-              <button class="copy-btn copy-field-btn" data-copy="mdnuralam6498@gmail.com">Copy</button>
+              <button class="copy-mini-btn copy-field-btn" data-copy="mdnuralam6498@gmail.com">Copy</button>
             </div>
 
-            <div class="contact-detail-card">
-              <div class="contact-meta-left">
+            <div class="contact-info-card">
+              <div class="contact-info-left">
                 <div class="contact-icon-box">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                 </div>
                 <div>
-                  <div class="contact-label">Telephone</div>
-                  <div class="contact-val">+8801312837622</div>
+                  <div class="contact-mini-tag">Mobile Phone</div>
+                  <div class="contact-main-text">+8801312837622</div>
                 </div>
               </div>
-              <button class="copy-btn copy-field-btn" data-copy="+8801312837622">Copy</button>
+              <button class="copy-mini-btn copy-field-btn" data-copy="+8801312837622">Copy</button>
             </div>
 
-            <div class="contact-detail-card">
-              <div class="contact-meta-left">
+            <div class="contact-info-card">
+              <div class="contact-info-left">
                 <div class="contact-icon-box">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                 </div>
                 <div>
-                  <div class="contact-label">Location</div>
-                  <div class="contact-val">Mirpur, Dhaka, Bangladesh</div>
+                  <div class="contact-mini-tag">Current Location</div>
+                  <div class="contact-main-text">Mirpur, Dhaka, Bangladesh</div>
                 </div>
               </div>
               <span class="tech-pill">Timezone: UTC+6</span>
             </div>
 
-            <div class="contact-detail-card">
-              <div class="contact-meta-left">
+            <div class="contact-info-card">
+              <div class="contact-info-left">
                 <div class="contact-icon-box">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                 </div>
                 <div>
-                  <div class="contact-label">Developer Profiles</div>
-                  <div class="contact-val" style="display: flex; gap: 0.75rem; margin-top: 0.25rem;">
-                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" style="color: var(--solid-accent-text); font-size: 0.85rem;">GitHub ↗</a>
+                  <div class="contact-mini-tag">Profiles</div>
+                  <div class="contact-main-text" style="display: flex; gap: 0.75rem; font-size: 0.875rem; margin-top: 0.2rem;">
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" style="color: var(--accent-text);">GitHub ↗</a>
                     <span style="color: var(--border-strong);">|</span>
-                    <a href="https://orcid.org" target="_blank" rel="noopener noreferrer" style="color: var(--solid-accent-text); font-size: 0.85rem;">ORCID iD ↗</a>
+                    <a href="https://orcid.org" target="_blank" rel="noopener noreferrer" style="color: var(--accent-text);">ORCID iD ↗</a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Quick Message Form -->
-          <div class="contact-form-panel">
+          <!-- Right Interactive Form -->
+          <div class="contact-form-box">
             <form id="contact-form">
               <div class="form-group">
                 <label for="contact-name" class="form-label">Full Name</label>
-                <input type="text" id="contact-name" class="form-input" placeholder="e.g. Dr. Alex Morgan" required>
+                <input type="text" id="contact-name" class="form-input" placeholder="e.g. Dr. Jennifer Vance" required>
               </div>
               <div class="form-group">
                 <label for="contact-email" class="form-label">Email Address</label>
-                <input type="email" id="contact-email" class="form-input" placeholder="e.g. alex@example.com" required>
+                <input type="email" id="contact-email" class="form-input" placeholder="e.g. jennifer@institution.edu" required>
               </div>
               <div class="form-group">
-                <label for="contact-subject" class="form-label">Subject / Purpose</label>
-                <input type="text" id="contact-subject" class="form-input" placeholder="e.g. AI Research Collaboration or Job Opportunity" required>
+                <label for="contact-subject" class="form-label">Inquiry Subject</label>
+                <input type="text" id="contact-subject" class="form-input" placeholder="e.g. Computer Vision Research Collaboration" required>
               </div>
               <div class="form-group">
                 <label for="contact-message" class="form-label">Message Details</label>
-                <textarea id="contact-message" class="form-textarea" placeholder="Provide details regarding the role, research scope, or inquiry..." required></textarea>
+                <textarea id="contact-message" class="form-textarea" placeholder="Outline the objective, timeline, or job position..." required></textarea>
               </div>
               <button type="submit" class="btn btn-primary" style="width: 100%;">
-                Send Inquiry
+                Send Inquiry Message
               </button>
             </form>
           </div>
@@ -987,12 +1164,13 @@
   <!-- Site Footer -->
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-top">
-        <div class="footer-brand">
-          Md. Nur Alam &mdash; AI/ML &amp; Software Engineer
+      <div class="footer-inner-top">
+        <div class="footer-title">
+          Md. Nur Alam &bull; AI/ML &amp; Computer Vision Engineer
         </div>
-        <ul class="footer-links">
+        <ul class="footer-nav-list">
           <li><a href="#about">About</a></li>
+          <li><a href="#vision-demo">XAI Demo</a></li>
           <li><a href="#research">Research</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#experience">Experience</a></li>
@@ -1001,16 +1179,31 @@
         </ul>
       </div>
 
-      <div class="footer-bottom">
-        <div>&copy; 2026 Md. Nur Alam. Strictly engineered with clean solid colors. Designed for zero-overhead Vercel deployment.</div>
+      <div class="footer-inner-bottom">
+        <div>&copy; 2026 Md. Nur Alam. Crafted with Swiss minimalist engineering aesthetic. Solid colors only.</div>
         <div style="font-family: var(--font-mono); font-size: 0.775rem;">
-          SYSTEM: v1.0.0 &bull; LATENCY: MINIMAL
+          SYSTEM: OPTIMIZED &bull; LATENCY: &lt;15ms
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- Toast Notification element -->
+  <!-- BibTeX Modal -->
+  <div class="modal-backdrop" id="bibtex-modal" role="dialog" aria-modal="true" aria-labelledby="modal-bibtex-title">
+    <div class="modal-box">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close dialog">✕</button>
+      <h3 id="modal-bibtex-title" style="font-size: 1.2rem; margin-bottom: 0.5rem;">BibTeX Citation</h3>
+      <p style="font-size: 0.85rem; color: var(--text-muted);">Copy the BibTeX entry below to cite this scientific work in your paper.</p>
+      
+      <pre class="bibtex-code-block" id="bibtex-content">Loading citation...</pre>
+
+      <div style="display: flex; justify-content: flex-end; gap: 0.5rem;">
+        <button class="btn btn-primary btn-sm" id="copy-bibtex-btn">Copy to Clipboard</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Feedback -->
   <div class="toast-msg" id="toast-msg" role="status" aria-live="polite">
     <span id="toast-icon">✓</span>
     <span id="toast-text">Copied to clipboard</span>

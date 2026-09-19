@@ -1,16 +1,32 @@
 /**
- * MD. NUR ALAM - PORTFOLIO INTERACTIVE LOGIC
- * Senior Engineering standard: modular, accessible, zero-dependency, high performance.
+ * MD. NUR ALAM - HIGH-PERFORMANCE INTERACTIVE PORTFOLIO ENGINE
+ * Senior Frontend Craftsmanship: Modular, Accessible, Zero-Dependency, Responsive.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initScrollProgress();
   initThemeToggle();
   initMobileNav();
   initScrollSpy();
+  initVisionSimulator();
   initProjectFiltering();
+  initBibtexModal();
   initClipboardHandlers();
   initContactForm();
 });
+
+/* --- Scroll Depth Reading Progress --- */
+function initScrollProgress() {
+  const progressBar = document.getElementById('scroll-progress');
+  if (!progressBar) return;
+
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    progressBar.style.width = `${scrollPercent}%`;
+  }, { passive: true });
+}
 
 /* --- Theme Management --- */
 function initThemeToggle() {
@@ -18,7 +34,6 @@ function initThemeToggle() {
   const themeIcon = document.getElementById('theme-icon');
   const html = document.documentElement;
 
-  // Retrieve stored theme preference or default to dark
   const storedTheme = localStorage.getItem('na_portfolio_theme') || 'dark';
   setTheme(storedTheme);
 
@@ -53,7 +68,6 @@ function initMobileNav() {
       toggleBtn.textContent = isOpen ? '✕' : '☰';
     });
 
-    // Close menu when clicking any nav link
     navLinks.forEach(link => {
       link.addEventListener('click', () => {
         if (navMenu.classList.contains('open')) {
@@ -97,9 +111,146 @@ function initScrollSpy() {
   sections.forEach(section => observer.observe(section));
 }
 
+/* --- INTERACTIVE GRAD-CAM & COMPUTER VISION SIMULATOR --- */
+function initVisionSimulator() {
+  const modeBtns = document.querySelectorAll('.vision-mode-btn');
+  const diseaseBtns = document.querySelectorAll('.disease-btn');
+
+  const gradcamOverlay = document.getElementById('gradcam-overlay');
+  const attentionBox = document.getElementById('attention-bounding-box');
+  const attentionLabel = document.getElementById('attention-label');
+  const lesion1 = document.getElementById('lesion-primary');
+  const lesion2 = document.getElementById('lesion-secondary');
+  const statusTag = document.getElementById('viewport-status-tag');
+
+  const teleClass = document.getElementById('tele-class');
+  const teleConf = document.getElementById('tele-conf');
+  const teleLatency = document.getElementById('tele-latency');
+
+  // Diagnostic profiles for Amrapali mango cultivar
+  const diseaseProfiles = {
+    anthracnose: {
+      name: 'Anthracnose (Colletotrichum)',
+      conf: '98.7%',
+      latency: '14.2 ms',
+      lesionColor: '#78350f',
+      lesionStroke: '#b45309',
+      hasLesions: true,
+      boxX: '90', boxY: '55', boxW: '105', boxH: '75',
+      boxLabel: 'ROI_01: ANTHRACNOSE [0.987]'
+    },
+    dieback: {
+      name: 'Dieback (Lasiodiplodia theobromae)',
+      conf: '97.3%',
+      latency: '15.8 ms',
+      lesionColor: '#451a03',
+      lesionStroke: '#78350f',
+      hasLesions: true,
+      boxX: '125', boxY: '35', boxW: '75', boxH: '80',
+      boxLabel: 'ROI_01: DIEBACK [0.973]'
+    },
+    canker: {
+      name: 'Bacterial Canker (Xanthomonas)',
+      conf: '96.5%',
+      latency: '13.9 ms',
+      lesionColor: '#7f1d1d',
+      lesionStroke: '#b91c1c',
+      hasLesions: true,
+      boxX: '105', boxY: '70', boxW: '80', boxH: '60',
+      boxLabel: 'ROI_01: BACTERIAL CANKER [0.965]'
+    },
+    healthy: {
+      name: 'Healthy Control (No Pathogen)',
+      conf: '99.1%',
+      latency: '12.4 ms',
+      lesionColor: '#151b24',
+      lesionStroke: '#252a38',
+      hasLesions: false,
+      boxX: '45', boxY: '22', boxW: '190', boxH: '136',
+      boxLabel: 'ROI_FULL: HEALTHY [0.991]'
+    }
+  };
+
+  let currentMode = 'gradcam';
+  let currentDisease = 'anthracnose';
+
+  // Handle Mode changes (Grad-CAM, Optical, Attention)
+  modeBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      modeBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentMode = btn.getAttribute('data-mode');
+      applyVisionState();
+    });
+  });
+
+  // Handle Disease selection changes
+  diseaseBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      diseaseBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentDisease = btn.getAttribute('data-disease');
+      applyVisionState();
+    });
+  });
+
+  function applyVisionState() {
+    const profile = diseaseProfiles[currentDisease];
+
+    // Update Telemetry
+    if (teleClass) teleClass.textContent = profile.name;
+    if (teleConf) teleConf.textContent = profile.conf;
+    if (teleLatency) teleLatency.textContent = profile.latency;
+
+    // Update Lesion visuals
+    if (lesion1 && lesion2) {
+      if (profile.hasLesions) {
+        lesion1.style.opacity = '1';
+        lesion2.style.opacity = '1';
+        lesion1.setAttribute('fill', profile.lesionColor);
+        lesion1.setAttribute('stroke', profile.lesionStroke);
+        lesion2.setAttribute('fill', profile.lesionColor);
+        lesion2.setAttribute('stroke', profile.lesionStroke);
+      } else {
+        lesion1.style.opacity = '0';
+        lesion2.style.opacity = '0';
+      }
+    }
+
+    // Update Mode Visuals
+    if (currentMode === 'gradcam') {
+      if (gradcamOverlay) gradcamOverlay.style.opacity = profile.hasLesions ? '1' : '0.1';
+      if (attentionBox) attentionBox.style.opacity = '0';
+      if (attentionLabel) attentionLabel.style.opacity = '0';
+      if (statusTag) statusTag.textContent = 'LAYER: CONV_LAST // GRAD-CAM ACTIVE';
+    } else if (currentMode === 'optical') {
+      if (gradcamOverlay) gradcamOverlay.style.opacity = '0';
+      if (attentionBox) attentionBox.style.opacity = '0';
+      if (attentionLabel) attentionLabel.style.opacity = '0';
+      if (statusTag) statusTag.textContent = 'OPTICAL CAPTURE // RGB RAW';
+    } else if (currentMode === 'attention') {
+      if (gradcamOverlay) gradcamOverlay.style.opacity = '0.25';
+      if (attentionBox) {
+        attentionBox.style.opacity = '1';
+        attentionBox.setAttribute('x', profile.boxX);
+        attentionBox.setAttribute('y', profile.boxY);
+        attentionBox.setAttribute('width', profile.boxW);
+        attentionBox.setAttribute('height', profile.boxH);
+      }
+      if (attentionLabel) {
+        attentionLabel.style.opacity = '1';
+        attentionLabel.setAttribute('x', profile.boxX);
+        attentionLabel.setAttribute('y', String(Number(profile.boxY) - 5));
+        attentionLabel.textContent = profile.boxLabel;
+      }
+      if (statusTag) statusTag.textContent = 'ATTENTION MAP // BOUNDING ROI';
+    }
+  }
+}
+
 /* --- Project Category Filter --- */
 function initProjectFiltering() {
-  const filterBtns = document.querySelectorAll('.filter-btn');
+  const filterBtns = document.querySelectorAll('.filter-pill');
   const projectCards = document.querySelectorAll('.project-card');
 
   if (!filterBtns.length || !projectCards.length) return;
@@ -108,11 +259,9 @@ function initProjectFiltering() {
     btn.addEventListener('click', () => {
       const targetFilter = btn.getAttribute('data-filter');
 
-      // Update active state
       filterBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
 
-      // Filter cards
       projectCards.forEach(card => {
         const cardCategory = card.getAttribute('data-category');
         if (targetFilter === 'all' || cardCategory === targetFilter) {
@@ -126,18 +275,83 @@ function initProjectFiltering() {
   });
 }
 
+/* --- BibTeX Modal System --- */
+function initBibtexModal() {
+  const modal = document.getElementById('bibtex-modal');
+  const closeBtn = document.getElementById('modal-close-btn');
+  const content = document.getElementById('bibtex-content');
+  const copyBtn = document.getElementById('copy-bibtex-btn');
+  const openBtns = document.querySelectorAll('.open-bibtex-btn');
+
+  const citations = {
+    ieee: `@inproceedings{alam2026benchmarking,
+  title={Benchmarking Attention-Enhanced Encoder-Decoder Models for Polyp Segmentation in Colonoscopy Images},
+  author={Alam, Md. Nur and others},
+  booktitle={IEEE International Conference on Robotics, Automation, Artificial-intelligence and Internet-of-Things (RAAICON)},
+  year={2026},
+  note={Accepted for Presentation, Paper ID: 433}
+}`,
+    mendeley: `@misc{alam2026mango,
+  title={Amrapali Mango Fruit Diseases: A Cultivar-Specific Image Dataset for Computer Vision and Deep CNN Classification},
+  author={Alam, Md. Nur},
+  year={2026},
+  month={January},
+  publisher={Mendeley Data},
+  version={1},
+  doi={10.17632/ypttkp5fb5.1}
+}`
+  };
+
+  if (!modal) return;
+
+  openBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const type = btn.getAttribute('data-type');
+      const bibtex = citations[type] || citations.ieee;
+      if (content) content.textContent = bibtex;
+      modal.classList.add('open');
+    });
+  });
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => modal.classList.remove('open'));
+  }
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) modal.classList.remove('open');
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('open')) {
+      modal.classList.remove('open');
+    }
+  });
+
+  if (copyBtn && content) {
+    copyBtn.addEventListener('click', () => {
+      copyToClipboard(content.textContent, 'BibTeX citation copied to clipboard');
+      modal.classList.remove('open');
+    });
+  }
+}
+
 /* --- Clipboard Copy Handlers & Toast System --- */
 function initClipboardHandlers() {
-  // Hero Copy Email Button
   const heroCopyBtn = document.getElementById('copy-email-hero');
+  const heroCopyText = document.getElementById('hero-copy-text');
+
   if (heroCopyBtn) {
     heroCopyBtn.addEventListener('click', () => {
       const email = heroCopyBtn.getAttribute('data-email');
       copyToClipboard(email, 'Email address copied to clipboard');
+      if (heroCopyText) {
+        const orig = heroCopyText.textContent;
+        heroCopyText.textContent = '✓ Copied!';
+        setTimeout(() => { heroCopyText.textContent = orig; }, 2000);
+      }
     });
   }
 
-  // Field Copy Buttons
   const fieldCopyBtns = document.querySelectorAll('.copy-field-btn');
   fieldCopyBtns.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -146,7 +360,6 @@ function initClipboardHandlers() {
     });
   });
 
-  // DOI Copy Button
   const doiBtns = document.querySelectorAll('.copy-doi-btn');
   doiBtns.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -158,7 +371,6 @@ function initClipboardHandlers() {
 
 function copyToClipboard(text, successMessage) {
   if (!navigator.clipboard) {
-    // Fallback
     const textarea = document.createElement('textarea');
     textarea.value = text;
     document.body.appendChild(textarea);
@@ -213,13 +425,10 @@ function initContactForm() {
       return;
     }
 
-    // Construct mailto link as direct fallback
     const mailtoUrl = `mailto:mdnuralam6498@gmail.com?subject=${encodeURIComponent(subject || 'Inquiry from ' + name)}&body=${encodeURIComponent('From: ' + name + ' (' + email + ')\n\n' + message)}`;
 
-    // Open user default mail client
     window.location.href = mailtoUrl;
-
-    showToast('Mail client triggered! Thank you for reaching out.');
+    showToast('Triggering mail client... Thank you!');
     form.reset();
   });
 }
