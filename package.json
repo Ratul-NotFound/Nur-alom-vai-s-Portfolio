@@ -4,8 +4,8 @@
   "description": "Professional portfolio website for Md. Nur Alam — AI/ML Engineer & Computer Vision Researcher",
   "main": "index.html",
   "scripts": {
-    "dev": "serve .",
-    "start": "serve ."
+    "dev": "npx -y serve .",
+    "start": "npx -y serve ."
   },
   "keywords": [
     "portfolio",
