@@ -1,0 +1,24 @@
+{
+  "name": "nur-alam-portfolio",
+  "version": "1.0.0",
+  "description": "Professional portfolio website for Md. Nur Alam — AI/ML Engineer & Computer Vision Researcher",
+  "main": "index.html",
+  "scripts": {
+    "dev": "serve .",
+    "start": "serve ."
+  },
+  "keywords": [
+    "portfolio",
+    "ai",
+    "ml",
+    "computer-vision",
+    "deep-learning",
+    "xai",
+    "grad-cam"
+  ],
+  "author": "Md. Nur Alam",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.4"
+  }
+}
