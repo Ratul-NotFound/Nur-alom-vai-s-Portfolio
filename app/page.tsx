@@ -18,8 +18,8 @@ export default function Home() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["home", "projects", "research", "experience", "skills", "honors", "education", "contact"];
-      const scrollPosition = window.scrollY + 200;
+      const sections = ["home", "projects", "experience", "skills", "research", "honors", "education", "contact"];
+      const scrollPosition = window.scrollY + 220;
 
       for (const sectionId of sections) {
         const el = document.getElementById(sectionId);
@@ -40,18 +40,18 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-[#141311] text-white selection:bg-orange-500 selection:text-white relative">
+    <main className="min-h-screen bg-[#141311] text-white selection:bg-orange-500 selection:text-white relative overflow-x-hidden">
       {/* Floating Navigation Dock */}
       <FloatingDock activeSection={activeSection} />
 
       {/* Master 2-Column Container */}
-      <div className="mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8 pt-8 sm:pt-14 pb-20">
+      <div className="mx-auto max-w-[1240px] px-3.5 sm:px-6 lg:px-8 pt-4 sm:pt-14 pb-28 md:pb-20">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-14 items-start">
           {/* Left Column: Fixed / Sticky Profile Card */}
           <ProfileSidebar />
 
           {/* Right Column: Main Content Flow */}
-          <div className="flex-1 min-w-0 w-full flex flex-col gap-20">
+          <div className="flex-1 min-w-0 w-full flex flex-col gap-14 sm:gap-20">
             <Hero />
             <Projects />
             <Experience />
