@@ -33,18 +33,18 @@ export const RecentProjectCard: React.FC<RecentProjectCardProps> = ({
   return (
     <div
       onMouseMove={handleMouseMove}
-      className="group relative flex flex-col sm:flex-row p-4 sm:p-6 rounded-2xl sm:rounded-3xl gap-4 sm:gap-7 items-start sm:items-center border border-white/[0.06] bg-[#181715]/40 backdrop-blur-xl transition-all duration-500 hover:bg-[#1e1d1a]/70 hover:border-orange-500/30 hover:shadow-[0_20px_50px_-15px_rgba(249,115,22,0.12)] cursor-pointer mb-4 overflow-hidden"
+      className="group relative flex flex-col md:flex-row p-4 sm:p-5 lg:p-6 rounded-2xl sm:rounded-3xl gap-4 sm:gap-6 items-start md:items-center border border-white/[0.06] bg-[#181715]/40 backdrop-blur-xl transition-all duration-500 hover:bg-[#1e1d1a]/70 hover:border-orange-500/30 hover:shadow-[0_20px_50px_-15px_rgba(249,115,22,0.12)] cursor-pointer mb-4 overflow-hidden"
     >
       {/* Dynamic Cursor Spotlight Highlight */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_var(--mouse-x,50%)_var(--mouse-y,50%),rgba(249,115,22,0.09),transparent_60%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
       {/* Top-Right Pointing Arrow on Hover */}
-      <div className="absolute top-4 right-4 sm:top-6 sm:right-6 z-20 hidden sm:flex items-center justify-center h-10 w-10 sm:h-11 sm:w-11 rounded-full border border-white/10 bg-white/[0.05] text-white opacity-0 scale-75 translate-y-1 group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0 group-hover:border-orange-500/50 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300 shadow-lg group-hover:shadow-[0_0_25px_rgba(249,115,22,0.35)] pointer-events-none">
+      <div className="absolute top-4 right-4 sm:top-6 sm:right-6 z-20 hidden md:flex items-center justify-center h-10 w-10 sm:h-11 sm:w-11 rounded-full border border-white/10 bg-white/[0.05] text-white opacity-0 scale-75 translate-y-1 group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0 group-hover:border-orange-500/50 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300 shadow-lg group-hover:shadow-[0_0_25px_rgba(249,115,22,0.35)] pointer-events-none">
         <FiArrowUpRight size={22} className="transition-transform duration-300" />
       </div>
 
       {/* Image Container */}
-      <div className="w-full sm:w-56 h-48 sm:h-40 shrink-0 relative z-10 overflow-hidden rounded-xl sm:rounded-2xl border border-white/10 shadow-lg group-hover:border-orange-500/30 transition-all duration-500 bg-[#141311]">
+      <div className="w-full md:w-52 h-44 sm:h-48 md:h-38 shrink-0 relative z-10 overflow-hidden rounded-xl sm:rounded-2xl border border-white/10 shadow-lg group-hover:border-orange-500/30 transition-all duration-500 bg-[#141311]">
         <img
           src={pic}
           alt={heading}
@@ -54,7 +54,7 @@ export const RecentProjectCard: React.FC<RecentProjectCardProps> = ({
       </div>
 
       {/* Content Column */}
-      <div className="flex-1 flex flex-col gap-2 relative z-10 w-full min-w-0 pr-0 sm:pr-10">
+      <div className="flex-1 flex flex-col gap-2 relative z-10 w-full min-w-0 pr-0 md:pr-10">
         {/* Heading */}
         <h3 className="text-white font-bold text-lg sm:text-2xl tracking-tight transition-colors duration-300 group-hover:text-orange-400">
           {heading}

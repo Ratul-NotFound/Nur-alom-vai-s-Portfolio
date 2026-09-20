@@ -26,10 +26,10 @@ export const Hero: React.FC = () => {
       </div>
 
       {/* Stats - 2x2 grid on mobile with subtle border separation, row on desktop */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 w-full gap-3 sm:gap-6 lg:gap-12">
+      <div className="grid grid-cols-2 sm:grid-cols-4 w-full gap-3 sm:gap-5 lg:gap-6">
         {stats.map((stat, i) => (
-          <div key={i} className="flex flex-col items-start p-3.5 sm:p-0 rounded-2xl sm:rounded-none bg-white/[0.02] sm:bg-transparent border border-white/[0.04] sm:border-none group cursor-default">
-            <h2 className={`${Hstyle} group-hover:text-orange-500 transition-colors duration-300`}>
+          <div key={i} className="flex flex-col items-start p-3 sm:p-0 rounded-2xl sm:rounded-none bg-white/[0.02] sm:bg-transparent border border-white/[0.04] sm:border-none group cursor-default">
+            <h2 className="text-white font-bold text-2xl sm:text-3xl lg:text-4xl group-hover:text-orange-500 transition-colors duration-300">
               {stat.count}
             </h2>
             <p className="text-gray-500 text-[10px] sm:text-xs font-semibold tracking-wider uppercase mt-1">

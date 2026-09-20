@@ -39,12 +39,12 @@ export const ProfileSidebar: React.FC = () => {
   const [imgLoaded, setImgLoaded] = useState(false);
 
   return (
-    <aside className="w-full max-w-full sm:max-w-[420px] mx-auto lg:mx-0 lg:w-[350px] lg:shrink-0 lg:sticky lg:top-16 self-start shadow-2xl">
-      <div className="bg-[#1a1816] p-5 sm:p-7 lg:p-9 rounded-[2rem] border border-white/[0.06] items-center gap-6 sm:gap-7 flex flex-col backdrop-blur-xl">
-        {/* Full Image — 533 / 700 Aspect Ratio */}
+    <div className="w-full shadow-2xl rounded-[2rem]">
+      <div className="bg-[#1a1816] p-4 sm:p-6 xl:p-8 rounded-[1.75rem] sm:rounded-[2rem] border border-white/[0.06] items-center gap-4 sm:gap-6 flex flex-col backdrop-blur-xl">
+        {/* Profile Image with smooth aspect ratio */}
         <div
-          className="relative group w-full overflow-hidden rounded-2xl"
-          style={{ aspectRatio: "533 / 680" }}
+          className="relative group w-full max-w-[260px] sm:max-w-full mx-auto overflow-hidden rounded-2xl"
+          style={{ aspectRatio: "533 / 640" }}
         >
           {/* Skeleton Shimmer */}
           {!imgLoaded && (
@@ -55,24 +55,24 @@ export const ProfileSidebar: React.FC = () => {
             alt="Md. Nur Alam"
             fill
             priority
-            sizes="(max-width: 768px) 100vw, 350px"
+            sizes="(max-width: 768px) 260px, 350px"
             onLoad={() => setImgLoaded(true)}
             className={`w-full h-full object-cover object-top rounded-2xl shadow-2xl transition-all duration-500 group-hover:scale-[1.03] ${
               imgLoaded ? "sidebar-img-visible" : "sidebar-img-hidden"
             }`}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent rounded-2xl" />
-          <span className="absolute bottom-3 left-3 text-white text-[11px] sm:text-xs font-semibold bg-orange-500/90 px-3 py-1 rounded-full backdrop-blur-sm shadow-md">
+          <span className="absolute bottom-2.5 left-2.5 sm:bottom-3 sm:left-3 text-white text-[10px] sm:text-xs font-semibold bg-orange-500/90 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full backdrop-blur-sm shadow-md">
             Available for Work
           </span>
         </div>
 
         {/* Name */}
         <div className="text-center">
-          <h1 className="font-bold text-2xl sm:text-3xl text-white tracking-tight">
+          <h1 className="font-bold text-xl sm:text-2xl xl:text-3xl text-white tracking-tight">
             Md. Nur Alam
           </h1>
-          <div className="h-0.5 w-12 bg-orange-500 rounded-full mx-auto mt-2" />
+          <div className="h-0.5 w-10 sm:w-12 bg-orange-500 rounded-full mx-auto mt-1.5 sm:mt-2" />
         </div>
 
         {/* Bio */}
@@ -117,7 +117,7 @@ export const ProfileSidebar: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-orange-500/0 via-white/20 to-orange-500/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
         </a>
       </div>
-    </aside>
+    </div>
   );
 };
 
