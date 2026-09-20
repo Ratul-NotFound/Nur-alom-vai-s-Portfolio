@@ -7,11 +7,10 @@ interface HeadingProps {
 
 export const Heading: React.FC<HeadingProps> = ({ FWord, LWord }) => {
   return (
-    <h2 className="text-white text-left font-black text-[40px] sm:text-[64px] lg:text-[80px] leading-[0.92] tracking-tight uppercase m-0 p-0">
-      {FWord}{" "}
-      <span className="text-[#2c2825]" style={{ color: "var(--text-ghost)" }}>
-        {LWord}
-      </span>
-    </h2>
+    <h1 className="text-white text-left font-extrabold text-[36px] xs:text-[42px] sm:text-[60px] md:text-[80px] lg:text-[94px] leading-[1.05] sm:leading-none m-0 p-0 tracking-tight select-none break-words">
+      {FWord} <span style={{ color: "#2b2927" }}>{LWord}</span>
+    </h1>
   );
 };
+
+export default Heading;

@@ -1,209 +1,176 @@
 "use client";
 
 import React, { useState } from "react";
-import { useToast } from "./Toast";
+import Heading from "./Heading";
+import { FiExternalLink, FiCopy, FiCheck } from "react-icons/fi";
+import { RiDoubleQuotesL } from "react-icons/ri";
 
-interface CitationData {
-  title: string;
-  bibtex: string;
-  ieee: string;
-  apa: string;
-}
+const researchItems = [
+  {
+    id: "ieee",
+    badge: "IEEE RAAICON 2026",
+    badgeExtra: "#433",
+    title: "Benchmarking Attention-Enhanced Encoder-Decoder Models for Polyp Segmentation",
+    description: "Evaluated Attention U-Net and ResUNet++ architectures for early colorectal polyp boundary delineation, achieving high clinical precision and 94.2% Dice score.",
+    bibtex: `@inproceedings{alam2026polyp,
+  author    = {Md. Nur Alam and Research Collaborators},
+  title     = {Benchmarking Attention-Enhanced Encoder-Decoder Models for Early-Stage Colorectal Polyp Segmentation},
+  booktitle = {Proc. of IEEE RAAICON 2026 (Paper #433)},
+  year      = {2026}
+}`,
+    links: [
+      { label: "Preprint", url: "https://github.com/mdnuralamrahi6498" },
+    ],
+  },
+  {
+    id: "thesis",
+    badge: "B.Sc. Thesis",
+    badgeExtra: "DIU CSE",
+    title: "Explainable Transfer Learning Deep CNN for Mango Fruit Disease Classification",
+    description: "End-to-end diagnostic framework for 7 major Amrapali cultivar diseases integrating fine-tuned CNN backbones and Grad-CAM visual explainability.",
+    bibtex: `@thesis{alam2026thesis,
+  author = {Md. Nur Alam},
+  title  = {Explainable Transfer Learning Deep CNN for Mango Fruit Disease Classification},
+  school = {Daffodil International University},
+  year   = {2026}
+}`,
+    links: [
+      { label: "Thesis PDF", url: "https://github.com/mdnuralamrahi6498" },
+    ],
+  },
+  {
+    id: "dataset",
+    badge: "Mendeley Data",
+    badgeExtra: "Benchmark",
+    title: "Amrapali Mango Fruit Diseases: Cultivar-Specific Image Dataset",
+    description: "Curated benchmark dataset containing 4,000+ annotated high-resolution orchard images across 7 verified disease categories with expert ground-truth.",
+    bibtex: `@data{alam2026mendeley,
+  author    = {Md. Nur Alam},
+  title     = {Amrapali Mango Fruit Diseases: Cultivar-Specific Image Dataset},
+  publisher = {Mendeley Data},
+  year      = {2026}
+}`,
+    links: [
+      { label: "Mendeley Data", url: "https://data.mendeley.com" },
+    ],
+  },
+];
 
 export const Research: React.FC = () => {
-  const { showToast } = useToast();
-  const [citationModal, setCitationModal] = useState<CitationData | null>(null);
-  const [citationFormat, setCitationFormat] = useState<"bibtex" | "ieee" | "apa">("bibtex");
+  const [activeBibtex, setActiveBibtex] = useState<string | null>(null);
+  const [copied, setCopied] = useState(false);
 
-  const copyDoi = () => {
-    navigator.clipboard.writeText("10.17632/ypttkp5fb5.1");
-    showToast("DOI copied: 10.17632/ypttkp5fb5.1");
-  };
-
-  const openIeeeCitation = () => {
-    setCitationModal({
-      title: "Benchmarking Attention-Enhanced Encoder–Decoder Models for Polyp Segmentation in Colonoscopy Images",
-      bibtex: `@inproceedings{alam2026benchmarking,
-  title={Benchmarking Attention-Enhanced Encoder--Decoder Models for Polyp Segmentation in Colonoscopy Images},
-  author={Alam, Md. Nur and Authors},
-  booktitle={2026 IEEE International Conference on Robotics, Automation, AI and IoT (RAAICON)},
-  pages={1--6},
-  year={2026},
-  organization={IEEE},
-  note={Paper ID: 433}
-}`,
-      ieee: `M. N. Alam et al., "Benchmarking Attention-Enhanced Encoder–Decoder Models for Polyp Segmentation in Colonoscopy Images," in 2026 IEEE RAAICON, Dhaka, 2026, Paper ID: 433.`,
-      apa: `Alam, M. N. (2026). Benchmarking attention-enhanced encoder–decoder models for polyp segmentation in colonoscopy images. 2026 IEEE RAAICON (Paper ID: 433).`,
-    });
-  };
-
-  const openDatasetCitation = () => {
-    setCitationModal({
-      title: "Amrapali Mango Fruit Diseases Dataset (Mendeley Data)",
-      bibtex: `@data{alam2026mendeley,
-  author = {Alam, Md. Nur},
-  publisher = {Mendeley Data},
-  title = {Amrapali Mango Fruit Diseases: A Cultivar-Specific Image Dataset for Computer Vision and Deep CNN Classification},
-  year = {2026},
-  version = {1},
-  doi = {10.17632/ypttkp5fb5.1}
-}`,
-      ieee: `M. N. Alam, "Amrapali Mango Fruit Diseases Dataset," Mendeley Data, V1, 2026. doi: 10.17632/ypttkp5fb5.1.`,
-      apa: `Alam, M. N. (2026). Amrapali mango fruit diseases dataset (Version 1) [Data set]. Mendeley Data. https://doi.org/10.17632/ypttkp5fb5.1`,
-    });
+  const copyBibtex = (text: string) => {
+    navigator.clipboard.writeText(text);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
   };
 
   return (
-    <section id="research" className="py-12 border-t border-[#1e212d]">
-      {/* Header */}
-      <div className="flex flex-col mb-8">
-        <h2 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight text-white uppercase leading-[0.95]">
-          ACADEMIC
-        </h2>
-        <span className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight text-[#222533] uppercase leading-[0.95] mt-1">
-          RESEARCH
-        </span>
+    <section id="research" data-name="Research" className="scroll-mt-28 flex flex-col gap-8">
+      <div>
+        <Heading FWord="ACADEMIC" LWord="RESEARCH" />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {/* Paper 1 */}
-        <article
-          className="p-5 rounded-[22px] border flex flex-col justify-between transition-all hover:border-orange-500/40"
-          style={{ backgroundColor: "#12131a", borderColor: "#1e212d" }}
-        >
-          <div>
-            <div className="flex items-center gap-2 mb-3">
-              <span className="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-[#f97316] text-white">
-                IEEE RAAICON 2026
-              </span>
-              <span className="text-[10px] font-mono text-[#9aa2b4]">#433</span>
-            </div>
-            <h3 className="text-sm font-bold text-white mb-2 leading-snug">
-              Benchmarking Attention-Enhanced Encoder–Decoder Models for Polyp Segmentation
-            </h3>
-            <p className="text-xs text-[#9aa2b4] leading-relaxed mb-4">
-              Attention-augmented deep architectures for early colorectal polyp segmentation and boundary delineation.
-            </p>
-          </div>
-
-          <div className="pt-3 border-t border-[#1e212d] flex items-center justify-between">
-            <button
-              onClick={openIeeeCitation}
-              className="text-xs font-mono font-bold text-[#f97316] hover:underline"
-            >
-              Cite Paper ▾
-            </button>
-            <a
-              href="#contact"
-              className="text-xs font-mono text-[#9aa2b4] hover:text-white"
-            >
-              Preprint ↗
-            </a>
-          </div>
-        </article>
-
-        {/* Thesis */}
-        <article
-          className="p-5 rounded-[22px] border flex flex-col justify-between transition-all hover:border-orange-500/40"
-          style={{ backgroundColor: "#12131a", borderColor: "#1e212d" }}
-        >
-          <div>
-            <div className="flex items-center gap-2 mb-3">
-              <span className="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-[#181a24] border border-[#232736] text-purple-400">
-                B.Sc. Thesis
-              </span>
-              <span className="text-[10px] font-mono text-[#9aa2b4]">DIU</span>
-            </div>
-            <h3 className="text-sm font-bold text-white mb-2 leading-snug">
-              Explainable Transfer Learning Deep CNN for Mango Fruit Disease Classification
-            </h3>
-            <p className="text-xs text-[#9aa2b4] leading-relaxed mb-4">
-              Diagnostic framework for 7 major Amrapali diseases with Grad-CAM visual heatmaps.
-            </p>
-          </div>
-
-          <div className="pt-3 border-t border-[#1e212d] flex items-center justify-between">
-            <span className="text-[11px] font-mono text-[#64748b]">Grad-CAM XAI</span>
-            <a
-              href="#projects"
-              className="text-xs font-mono text-[#f97316] hover:underline"
-            >
-              View Model ↗
-            </a>
-          </div>
-        </article>
-
-        {/* Dataset */}
-        <article
-          className="p-5 rounded-[22px] border flex flex-col justify-between transition-all hover:border-orange-500/40"
-          style={{ backgroundColor: "#12131a", borderColor: "#1e212d" }}
-        >
-          <div>
-            <div className="flex items-center gap-2 mb-3">
-              <span className="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-[#181a24] border border-[#232736] text-amber-400">
-                Mendeley Data
-              </span>
-              <span className="text-[10px] font-mono text-[#9aa2b4]">Jan 2026</span>
-            </div>
-            <h3 className="text-sm font-bold text-white mb-2 leading-snug">
-              Amrapali Mango Fruit Diseases: Cultivar-Specific Image Dataset
-            </h3>
-            <p className="text-xs text-[#9aa2b4] leading-relaxed mb-4">
-              Curated and standardized benchmark dataset across 7 classes with verified ground-truth labels.
-            </p>
-          </div>
-
-          <div className="pt-3 border-t border-[#1e212d] flex items-center justify-between">
-            <button
-              onClick={openDatasetCitation}
-              className="text-xs font-mono font-bold text-[#f97316] hover:underline"
-            >
-              Cite Dataset ▾
-            </button>
-            <button
-              onClick={copyDoi}
-              className="text-xs font-mono text-[#9aa2b4] hover:text-white"
-            >
-              Copy DOI
-            </button>
-          </div>
-        </article>
-      </div>
-
-      {/* Citation Modal */}
-      {citationModal && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
-          onClick={() => setCitationModal(null)}
-        >
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+        {researchItems.map((item) => (
           <div
-            className="w-full max-w-lg rounded-2xl border p-5 shadow-2xl flex flex-col gap-3"
-            style={{ backgroundColor: "#12131a", borderColor: "#232736" }}
-            onClick={(e) => e.stopPropagation()}
+            key={item.id}
+            className="group relative flex flex-col justify-between p-6 sm:p-7 rounded-[2rem] border border-white/[0.06] bg-[#181715]/40 backdrop-blur-xl transition-all duration-500 hover:bg-[#1e1d1a]/70 hover:border-orange-500/30 hover:shadow-[0_20px_50px_-15px_rgba(249,115,22,0.12)]"
           >
-            <div className="flex items-center justify-between border-b border-[#232736] pb-3">
-              <span className="text-xs font-mono font-bold text-[#f97316] uppercase">Citation Exporter</span>
-              <button onClick={() => setCitationModal(null)} className="text-xs text-[#9aa2b4] hover:text-white">✕</button>
+            <div>
+              {/* Badges */}
+              <div className="flex items-center gap-2 mb-4">
+                <span className="px-3 py-1 rounded-full text-xs font-bold bg-orange-500/10 text-orange-500 border border-orange-500/20">
+                  {item.badge}
+                </span>
+                <span className="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-white/[0.04] text-gray-400 border border-white/[0.08]">
+                  {item.badgeExtra}
+                </span>
+              </div>
+
+              {/* Title */}
+              <h3 className="text-white font-bold text-lg sm:text-xl leading-snug tracking-tight mb-3 group-hover:text-orange-400 transition-colors duration-300">
+                {item.title}
+              </h3>
+
+              {/* Description */}
+              <p className="text-gray-400 text-xs sm:text-sm leading-relaxed mb-6 font-sans">
+                {item.description}
+              </p>
             </div>
-            <div className="flex gap-2 font-mono text-xs">
-              {(["bibtex", "ieee", "apa"] as const).map((fmt) => (
-                <button
-                  key={fmt}
-                  onClick={() => setCitationFormat(fmt)}
-                  className={`px-3 py-1 rounded-lg uppercase ${
-                    citationFormat === fmt ? "bg-[#f97316] text-white" : "bg-[#181a24] text-[#9aa2b4]"
-                  }`}
+
+            {/* Action Bar */}
+            <div className="flex items-center justify-between pt-4 border-t border-white/[0.06]">
+              <button
+                type="button"
+                onClick={() => setActiveBibtex(item.bibtex)}
+                className="flex items-center gap-1.5 text-xs font-semibold text-orange-500 hover:text-orange-400 transition-colors"
+              >
+                <RiDoubleQuotesL size={15} />
+                <span>Cite BibTeX</span>
+              </button>
+
+              {item.links.map((link, i) => (
+                <a
+                  key={i}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 text-xs font-semibold text-gray-400 hover:text-white transition-colors"
                 >
-                  {fmt}
-                </button>
+                  <span>{link.label}</span>
+                  <FiExternalLink size={13} />
+                </a>
               ))}
             </div>
-            <pre className="p-3 rounded-xl bg-[#090a0f] border border-[#232736] text-xs font-mono text-white overflow-x-auto select-all">
-              {citationModal[citationFormat]}
+          </div>
+        ))}
+      </div>
+
+      {/* BibTeX Modal */}
+      {activeBibtex && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-fadeIn"
+          onClick={() => setActiveBibtex(null)}
+        >
+          <div
+            className="w-full max-w-xl p-6 sm:p-8 rounded-[2rem] bg-[#1a1816] border border-white/10 shadow-2xl relative"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center justify-between mb-4">
+              <h4 className="text-white font-bold text-lg flex items-center gap-2">
+                <RiDoubleQuotesL className="text-orange-500" size={20} />
+                BibTeX Citation
+              </h4>
+              <button
+                type="button"
+                onClick={() => setActiveBibtex(null)}
+                className="p-1 rounded-full text-gray-400 hover:text-white"
+              >
+                ✕
+              </button>
+            </div>
+
+            <pre className="p-4 rounded-xl bg-black/50 border border-white/[0.05] text-xs font-mono text-gray-300 overflow-x-auto whitespace-pre leading-relaxed mb-5">
+              {activeBibtex}
             </pre>
+
+            <div className="flex justify-end gap-3">
+              <button
+                type="button"
+                onClick={() => copyBibtex(activeBibtex)}
+                className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-orange-500 text-white font-bold text-xs uppercase tracking-wider hover:bg-orange-600 transition-colors"
+              >
+                {copied ? <FiCheck size={16} /> : <FiCopy size={16} />}
+                <span>{copied ? "Copied!" : "Copy BibTeX"}</span>
+              </button>
+            </div>
           </div>
         </div>
       )}
     </section>
   );
 };
+
+export default Research;
