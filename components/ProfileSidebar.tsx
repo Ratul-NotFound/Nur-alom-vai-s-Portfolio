@@ -17,7 +17,7 @@ const socialLinks = [
   },
   {
     Icon: CiLinkedin,
-    href: "https://linkedin.com/in/md-nur-alam",
+    href: "https://www.linkedin.com/in/mdnuralam6498rahi",
     hoverColor: "#0A66C2",
     label: "LinkedIn",
   },
@@ -107,7 +107,7 @@ export const ProfileSidebar: React.FC = () => {
         {/* Download CV Button */}
         <a
           href="/cv.pdf"
-          download
+          download="NUR_CV_2_PAGES.pdf"
           className="relative overflow-hidden group text-center w-full bg-white text-black font-bold py-3.5 rounded-xl hover:bg-orange-500 hover:text-white transition-all duration-300 shadow-lg active:scale-95 block uppercase tracking-widest text-xs"
         >
           <span className="relative z-10 flex items-center justify-center gap-2">

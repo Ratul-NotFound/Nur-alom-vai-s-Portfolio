@@ -34,8 +34,17 @@ export const CommandPalette: React.FC = () => {
 
   const copyPhone = () => {
     setIsOpen(false);
-    navigator.clipboard.writeText("+8801312837622");
-    showToast("Phone number copied: +8801312837622");
+    navigator.clipboard.writeText("01312837622");
+    showToast("Phone number copied: 01312837622");
+  };
+
+  const downloadCv = () => {
+    setIsOpen(false);
+    const link = document.createElement("a");
+    link.href = "/cv.pdf";
+    link.download = "NUR_CV_2_PAGES.pdf";
+    link.click();
+    showToast("Downloading CV (PDF)...");
   };
 
   const copyDoi = () => {
@@ -126,10 +135,18 @@ export const CommandPalette: React.FC = () => {
       icon: "✉️",
     },
     {
+      id: "download-cv",
+      title: "Download Curriculum Vitae (CV)",
+      category: "Actions",
+      subtitle: "NUR CV 2 PAGES (PDF)",
+      action: downloadCv,
+      icon: "📄",
+    },
+    {
       id: "copy-email",
       title: "Copy Email Address",
       category: "Actions",
-      subtitle: "mdnuralam6498@gmail.com / mnalam.cse@gmail.com",
+      subtitle: "mdnuralam6498@gmail.com",
       action: copyEmail,
       icon: "📋",
     },
@@ -137,7 +154,7 @@ export const CommandPalette: React.FC = () => {
       id: "copy-phone",
       title: "Copy Phone Number",
       category: "Actions",
-      subtitle: "+8801312837622",
+      subtitle: "01312837622",
       action: copyPhone,
       icon: "📞",
     },
